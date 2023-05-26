@@ -227,29 +227,41 @@ main .lateral nav ul li a {
 }
 
 /* Tienda */
-#lista {
+.lista {
   padding: 0px;
 }
-#lista * {
-  /* font-family: 'Sigmar', cursive */
+.lista * {
+  font-family: 'Sigmar', cursive;
+  color: black;
 }
 
-#lista p {
-  font-family: 'Sigmar', cursive;
+.lista p {
+  /* font-family: 'Sigmar', cursive; */
   font-size: larger;
   font-weight: bolder;
-  color: black;
+  /* color: black; */
   margin: 10px 10px 0px;
 }
 
-#lista .sub_lista {
+.lista .sub_lista {
   /* margin-bottom: 10px; */
 }
 
-#lista .sub_lista li a {
+.lista .sub_lista li a {
   /* font-family: 'Sigmar', cursive; */
   font-weight: 400;
-  /* margin-left: 15px; */
+  margin-left: 15px;
+}
+
+.lista .dropdown-center {
+  flex: auto;
+}
+.lista .dropdown-center button {
+  width: 100%;
+  border: solid 2px #a2c200;
+}
+.lista .dropdown-center ul {
+  background-color: #C7DA64;
 }
 
 .principal_tienda {
@@ -257,16 +269,17 @@ main .lateral nav ul li a {
   flex-direction: column;
   padding: 10px 20px;
 }
+
 .principal_tienda h2 {
   font-family: 'Hahmlet', serif;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .principal_tienda form {
   align-self: center;
   background-color: white;
   border-radius: 20px;
   padding: 5px;
-  margin: 10px;
+  margin-bottom: 10px;
 }
 .principal_tienda form img {
   vertical-align: text-top;
@@ -278,6 +291,13 @@ main .lateral nav ul li a {
 }
 .principal_tienda .paginas {
   align-self: flex-end;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.principal_tienda .carta {
+  height: 360px;
+  max-width: calc((100vw - 80px)/2);
+  max-height: calc(100vw - 80px);
 }
 
 /* Configurador */
