@@ -36,252 +36,209 @@
     </nav>
   </header>
 
-  <main class="en_linea">
-    <!--Filtros de busqueda-->
-    <aside>
-      <nav>
-        <ul id="lista">
-          <li>Baño</li>
-          <ul class="sub_lista">
-            <li><a href="#">Cortinas</a></li>
-            <li><a href="#">Contenedores</a></li>
-            <li><a href="#">Alfombras</a></li>
-          </ul>
-          <li>Cocina & comedor</li>
-          <ul class="sub_lista">
-            <li><a href="#">Manteles</a></li>
-            <li><a href="#">Servilletas</a></li>
-            <li><a href="#">Repasadores</a></li>
-            <li><a href="#">Contenedores</a></li>
-          </ul>
-          <li>Complementos</li>
-          <ul class="sub_lista">
-            <li><a href="#">Bolsos</a></li>
-            <li><a href="#">Mochilas</a></li>
-            <li><a href="#">Cartuchera</a></li>
-            <li><a href="#">Organizadores</a></li>
-            <li><a href="#">Neceseres</a></li>
-          </ul>
-          <li>Living & dormitorio</li>
-          <ul class="sub_lista">
-            <li><a href="#">Cortinas</a></li>
-            <li><a href="#">Almohadones</a></li>
-            <li><a href="#">Mantas</a></li>
-            <li><a href="#">Acolchados</a></li>
-          </ul>
-          <li>Materas y lonas</li>
-          <ul class="sub_lista">
-            <li><a href="#">Lonas</a></li>
-            <li><a href="#">Materas</a></li>
-            <li><a href="#">Yerberas</a></li>
-            <li><a href="#">Portamates</a></li>
-          </ul>
-        </ul>
-      </nav>
-    </aside>
-
-    <!--Articulo principal-->
-    <section id="principal_tienda">
-      <!-- Buscador -->
-      <form action="" method="get" enctype="application/x-www-form-urlencoded">
-        <fieldset><input type="search" placeholder="Buscador...">
-          <button type="submit"><img src="../images/lupa.png" alt="Lupa"></button>
-        </fieldset>
-      </form>
-
-      <h2>Todas las publicaciones</h2>
-      <!-- Botones cambio de pagina -->
-      <div class="paginas">
-        <button class="boton">anterior</button>
-        <button class="boton">siguiente</button>
-      </div>
-      <div id="publicaciones">
-
-        <!--Contenedor de tarjeta-->
-        <div class="carta">
-          <div class="contenido">
-            <!--Imagen -->
-            <div>
-              <img src="../images/producto_1.png" alt="Producto 1">
-            </div>
-            <!--Precio nuevo-->
-            <div>
-              <span class="actual">$2300.</span><span class="cent">00</span>
-            </div>
-            <!--Descripcion-->
-            <div>
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <!--Filtros de busqueda-->
+        <section class="col-12 col-md-auto lateral">
+          <nav class="navbar navbar-expand-md d-md-block" id="lista">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#baño" aria-controls="baño" aria-expanded="false" aria-label="Toggle navigation">
+                Baño
+              </button>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#cocina" aria-controls="cocina" aria-expanded="false" aria-label="Toggle navigation">
+                Cocina & comedor
+              </button>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#complementos" aria-controls="complementos" aria-expanded="false" aria-label="Toggle navigation">
+                Complementos
+              </button>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#living" aria-controls="living" aria-expanded="false" aria-label="Toggle navigation">
+                Living & dormitorio
+              </button>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#materas" aria-controls="materas" aria-expanded="false" aria-label="Toggle navigation">
+                Materas y lonas
+              </button>
+              
+              <div class="collapse navbar-collapse" id="baño">
+                <p>Baño</p>
+                <ul class="navbar-nav sub_lista">
+                  <li class="nav-item"><a href="#">Cortinas</a></li>
+                  <li class="nav-item"><a href="#">Contenedores</a></li>
+                  <li class="nav-item"><a href="#">Alfombras</a></li>
+                </ul>
+              </div>
+              <div class="collapse navbar-collapse" id="cocina">
+                <p>Cocina & comedor</p>
+                <ul class="navbar-nav sub_lista">
+                  <li><a href="#">Manteles</a></li>
+                  <li><a href="#">Servilletas</a></li>
+                  <li><a href="#">Repasadores</a></li>
+                  <li><a href="#">Contenedores</a></li>
+                </ul>
+              </div>
+              <div class="collapse navbar-collapse" id="complementos">
+                <p>Complementos</p>
+                <ul class="navbar-nav sub_lista">
+                  <li><a href="#">Bolsos</a></li>
+                  <li><a href="#">Mochilas</a></li>
+                  <li><a href="#">Cartuchera</a></li>
+                  <li><a href="#">Organizadores</a></li>
+                  <li><a href="#">Neceseres</a></li>
+                </ul>
+              </div>
+              <div class="collapse navbar-collapse" id="living">
+                <p>Living & dormitorio</p>
+                <ul class="navbar-nav sub_lista">
+                  <li><a href="#">Cortinas</a></li>
+                  <li><a href="#">Almohadones</a></li>
+                  <li><a href="#">Mantas</a></li>
+                  <li><a href="#">Acolchados</a></li>
+                </ul>
+              </div>
+              <div class="collapse navbar-collapse" id="materas">
+                <p>Materas y lonas</p>
+                <ul class="navbar-nav sub_lista">
+                  <li><a href="#">Lonas</a></li>
+                  <li><a href="#">Materas</a></li>
+                  <li><a href="#">Yerberas</a></li>
+                  <li><a href="#">Portamates</a></li>
+                </ul>
+              </div>
+          </nav>
+        </section>
+    
+        <!--Articulo principal-->
+        <section class="col-12 col-md principal_tienda">
+          <!-- Buscador -->
+          <form action="" method="get" enctype="application/x-www-form-urlencoded">
+            <input type="search" placeholder="Buscador...">
+            <button type="submit"><img src="../images/lupa.png" alt="Lupa"></button>
+            
+          </form>
+    
+          <h2>Todas las publicaciones</h2>
+          <!-- Botones cambio de pagina -->
+          <div class="paginas">
+            <button class="button">anterior</button>
+            <button class="button">siguiente</button>
+          </div>
+          <!-- Listado de productos -->
+          <div class="d-flex flex-wrap justify-content-around">
+            <!--Contenedor de tarjeta-->
+            <div class="carta">
+              <!--Imagen -->
+              <div><img src="../images/producto_1.png" alt="Producto 1"></div>
+              <!--Precio nuevo-->
+              <p class="actual">$2300.<span class="cent">00</span></p>
+              <!--Descripcion-->
               <p>Cartuchera hojas aqua</p>
+              <!--Boton carrito-->
+              <button class="carrito">
+                <img src="../images/carrito.png" alt="Carrito">
+              </button>
             </div>
-          </div>
-          <!--Boton carrito-->
-          <div class="carrito">
-            <img src="../images/carrito.png" alt="Carrito">
-          </div>
-        </div>
-
-        <!--Contenedor de tarjeta-->
-        <div class="carta">
-          <div class="contenido">
-            <!--Imagen -->
-            <div>
+            <!--Contenedor de tarjeta-->
+            <div class="carta">
+              <!--Imagen -->
               <img src="../images/producto_2.png" alt="Producto 2">
-            </div>
-            <!--Precio nuevo-->
-            <div>
-              <span class="actual">$7900.</span><span class="cent">00</span>
-            </div>
-            <!--Descripcion-->
-            <div>
+              <!--Precio nuevo-->
+              <p class="actual">$7900.<span class="cent">00</span></p>
+              <!--Descripcion-->
               <p>Cortina de baño con volado 180x180 cm</p>
+              <!--Boton carrito-->
+              <button class="carrito">
+                <img src="../images/carrito.png" alt="Carrito">
+              </button>
             </div>
-          </div>
-          <!--Boton carrito-->
-          <div class="carrito">
-            <img src="../images/carrito.png" alt="Carrito">
-          </div>
-        </div>
-
-        <!--Contenedor de tarjeta-->
-        <div class="carta">
-          <div class="contenido">
-            <!--Imagen -->
-            <div>
+            <!--Contenedor de tarjeta-->
+            <div class="carta">
+              <!--Imagen -->
               <img src="../images/producto_3.png" alt="Producto 3">
-            </div>
-            <!--Precio nuevo-->
-            <div>
-              <span class="actual">$6500.</span><span class="cent">00</span>
-            </div>
-            <!--Descripcion-->
-            <div>
+              <!--Precio nuevo-->
+              <p class="actual">$6500.<span class="cent">00</span></p>
+              <!--Descripcion-->
               <p>Mantelitos individuales X 6 u.</p>
+              <!--Boton carrito-->
+              <button class="carrito">
+                <img src="../images/carrito.png" alt="Carrito">
+              </button>
             </div>
-          </div>
-          <!--Boton carrito-->
-          <div class="carrito">
-            <img src="../images/carrito.png" alt="Carrito">
-          </div>
-        </div>
-
-        <!--Contenedor de tarjeta-->
-        <div class="carta">
-          <div class="contenido">
-            <!--Imagen -->
-            <div>
+            <!--Contenedor de tarjeta-->
+            <div class="carta">
+              <!--Imagen -->
               <img src="../images/producto_4.png" alt="Producto 4">
-            </div>
-            <!--Precio nuevo-->
-            <div>
-              <span class="actual">$3150.</span><span class="cent">00</span>
-            </div>
-            <!--Descripcion-->
-            <div>
+              <!--Precio nuevo-->
+              <p class="actual">$3150.<span class="cent">00</span></p>
+              <!--Descripcion-->
               <p>COMBO bolsita porta mate + yerbera</p>
+              <!--Boton carrito-->
+              <button class="carrito">
+                <img src="../images/carrito.png" alt="Carrito">
+              </button>
             </div>
-          </div>
-          <!--Boton carrito-->
-          <div class="carrito">
-            <img src="../images/carrito.png" alt="Carrito">
-          </div>
-        </div>
-
-        <!--Contenedor de tarjeta-->
-        <div class="carta">
-          <div class="contenido">
-            <!--Imagen -->
-            <div>
-              <img src="../images/producto_1.png" alt="Producto 5">
-            </div>
-            <!--Precio nuevo-->
-            <div>
-              <span class="actual">$2300.</span><span class="cent">00</span>
-            </div>
-            <!--Descripcion-->
-            <div>
+            <!--Contenedor de tarjeta-->
+            <div class="carta">
+              <!--Imagen -->
+              <div><img src="../images/producto_1.png" alt="Producto 1"></div>
+              <!--Precio nuevo-->
+              <p class="actual">$2300.<span class="cent">00</span></p>
+              <!--Descripcion-->
               <p>Cartuchera hojas aqua</p>
+              <!--Boton carrito-->
+              <button class="carrito">
+                <img src="../images/carrito.png" alt="Carrito">
+              </button>
             </div>
-          </div>
-          <!--Boton carrito-->
-          <div class="carrito">
-            <img src="../images/carrito.png" alt="Carrito">
-          </div>
-        </div>
-
-        <!--Contenedor de tarjeta-->
-        <div class="carta">
-          <div class="contenido">
-            <!--Imagen -->
-            <div>
-              <img src="../images/producto_2.png" alt="Producto 6">
-            </div>
-            <!--Precio nuevo-->
-            <div>
-              <span class="actual">$7900.</span><span class="cent">00</span>
-            </div>
-            <!--Descripcion-->
-            <div>
+            <!--Contenedor de tarjeta-->
+            <div class="carta">
+              <!--Imagen -->
+              <img src="../images/producto_2.png" alt="Producto 2">
+              <!--Precio nuevo-->
+              <p class="actual">$7900.<span class="cent">00</span></p>
+              <!--Descripcion-->
               <p>Cortina de baño con volado 180x180 cm</p>
+              <!--Boton carrito-->
+              <button class="carrito">
+                <img src="../images/carrito.png" alt="Carrito">
+              </button>
             </div>
-          </div>
-          <!--Boton carrito-->
-          <div class="carrito">
-            <img src="../images/carrito.png" alt="Carrito">
-          </div>
-        </div>
-
-        <!--Contenedor de tarjeta-->
-        <div class="carta">
-          <div class="contenido">
-            <!--Imagen -->
-            <div>
-              <img src="../images/producto_3.png" alt="Producto 7">
-            </div>
-            <!--Precio nuevo-->
-            <div>
-              <span class="actual">$6500.</span><span class="cent">00</span>
-            </div>
-            <!--Descripcion-->
-            <div>
+            <!--Contenedor de tarjeta-->
+            <div class="carta">
+              <!--Imagen -->
+              <img src="../images/producto_3.png" alt="Producto 3">
+              <!--Precio nuevo-->
+              <p class="actual">$6500.<span class="cent">00</span></p>
+              <!--Descripcion-->
               <p>Mantelitos individuales X 6 u.</p>
+              <!--Boton carrito-->
+              <button class="carrito">
+                <img src="../images/carrito.png" alt="Carrito">
+              </button>
             </div>
-          </div>
-          <!--Boton carrito-->
-          <div class="carrito">
-            <img src="../images/carrito.png" alt="Carrito">
-          </div>
-        </div>
-
-        <!--Contenedor de tarjeta-->
-        <div class="carta">
-          <div class="contenido">
-            <!--Imagen -->
-            <div>
-              <img src="../images/producto_4.png" alt="Producto 8">
-            </div>
-            <!--Precio nuevo-->
-            <div>
-              <span class="actual">$3150.</span><span class="cent">00</span>
-            </div>
-            <!--Descripcion-->
-            <div>
+            <!--Contenedor de tarjeta-->
+            <div class="carta">
+              <!--Imagen -->
+              <img src="../images/producto_4.png" alt="Producto 4">
+              <!--Precio nuevo-->
+              <p class="actual">$3150.<span class="cent">00</span></p>
+              <!--Descripcion-->
               <p>COMBO bolsita porta mate + yerbera</p>
+              <!--Boton carrito-->
+              <button class="carrito">
+                <img src="../images/carrito.png" alt="Carrito">
+              </button>
             </div>
+
           </div>
-          <!--Boton carrito-->
-          <div class="carrito">
-            <img src="../images/carrito.png" alt="Carrito">
+
+          <!-- Botones cambio de pagina -->
+          <div class="paginas">
+            <button class="button">anterior</button>
+            <button class="button">siguiente</button>
           </div>
-        </div>
-
+    
+        </section>
       </div>
-
-      <!-- Botones cambio de pagina -->
-      <div class="paginas">
-        <button class="boton">anterior</button>
-        <button class="boton">siguiente</button>
-      </div>
-
-    </section>
+    </div>
 
   </main>
 </body>
