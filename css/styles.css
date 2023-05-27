@@ -1,11 +1,18 @@
+/* Importación de fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Inter&display=swap');
 
+/* Reset CSS */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
   list-style: none;
+}
+
+/* Altura minima de 100 % viewport */
+body {
+  min-height: 100vh;
 }
 
 
@@ -46,6 +53,9 @@ main .lateral {
   padding: 0px;
 }
 
+main .lateral * {
+  font-family: 'Sigmar', cursive;
+}
 main .lateral nav ul {
   margin: 0px;
   padding: 0px;
@@ -61,7 +71,7 @@ main .lateral nav ul li {
 
 main .lateral nav ul li a {
   color: black;
-  font-family: 'Sigmar', cursive;
+  /* font-family: 'Sigmar', cursive; */
   text-decoration: none;
   font-weight: bold;
   text-align: center;
@@ -231,7 +241,7 @@ main .lateral nav ul li a {
   padding: 0px;
 }
 .lista * {
-  font-family: 'Sigmar', cursive;
+  /* font-family: 'Sigmar', cursive; */
   color: black;
 }
 
@@ -253,15 +263,27 @@ main .lateral nav ul li a {
   margin-left: 15px;
 }
 
-.lista .dropdown-center {
+.lateral .dropdown-center {
   flex: auto;
 }
-.lista .dropdown-center button {
+.lateral .dropdown-center button,
+.lateral .dropdown button {
   width: 100%;
   border: solid 2px #a2c200;
+  font-weight: bolder;
 }
-.lista .dropdown-center ul {
+.lateral .dropdown-center ul,
+.lateral .dropdown ul {
   background-color: #C7DA64;
+  border: solid 2px #a2c200;
+}
+.lateral .dropdown .dropdown-menu.show {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.lateral .dropdown .dropdown-menu li {
+  margin: 10px;
 }
 
 .principal_tienda {
@@ -301,30 +323,16 @@ main .lateral nav ul li a {
 }
 
 /* Configurador */
-#lateral_configurador {
-  padding: 10px;
+.main_configurador {
+  height: calc(100vh - 166px);
 }
+  
 
-#lateral_configurador p {
-  font-family: 'Sigmar', cursive;
-  padding-left: 3px;
-  margin-bottom: 3px;
-}
-
-#lateral_configurador select {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-#lateral_configurador #diseño {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-#lateral_configurador #diseño img {
+.lateral img {
   width: 100px;
   display: flex;
 }
+
 
 #principal_configurador {
   padding: 20px;
@@ -504,6 +512,14 @@ main .lateral nav ul li a {
     flex-direction: column;
     margin-left: 30px;
 
+  }
+
+  .main_configurador .row {
+    min-height: 100%;
+  }
+  
+  .lateral .dropdown ul {
+    width: 200%;
   }
 
 

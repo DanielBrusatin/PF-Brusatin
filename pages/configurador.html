@@ -36,67 +36,79 @@
     </nav>
   </header>
 
-  <main class="en_linea">
-
-    <!-- Selectores de configuracion -->
-    <aside id="lateral_configurador">
-      <p>Elija categoria</p>
-      <select>
-        <option value="" disabled selected>Categoria...</option>
-        <option value="Baño">Baño</option>
-        <option value="Cocina & comedor">Cocina & comedor</option>
-        <option value="Complementos">Complementos</option>
-        <option value="Living & dormitorio">Living & dormitorio</option>
-        <option value="Materas y lonas">Materas y lonas</option>
-      </select>
-      <p>Elija producto</p>
-      <select>
-        <option value="" disabled selected>Producto...</option>
-        <option value="Cortinas">Cortinas</option>
-        <option value="Contenedores">Contenedores</option>
-        <option value="Manteles">Manteles</option>
-        <option value="Servilletas">Servilletas</option>
-        <option value="Bolsos">Bolsos</option>
-        <option value="Mochilas">Mochilas</option>
-        <option value="Cortinas">Cortinas</option>
-        <option value="Almohadones">Almohadones</option>
-        <option value="Lonas">Lonas</option>
-        <option value="Materas">Materas</option>
-      </select>
-      <p>Elija medida</p>
-      <select>
-        <option value="" disabled selected>Medida...</option>
-        <option value="160 x 160">160 x 160</option>
-        <option value="80 x 80">80 x 80</option>
-        <option value="100 x 50">100 x 50</option>
-        <option value="150 x 80">150 x 80</option>
-      </select>
-      <p>Elija diseño</p>
-      <div id="diseño">
-        <div><img src="../images/diseño_1.png" alt="Diseño 1" class="diseño"></div>
-        <div><img src="../images/diseño_2.png" alt="Diseño 2" class="diseño"></div>
-        <div><img src="../images/diseño_3.png" alt="Diseño 3" class="diseño"></div>
-        <div><img src="../images/diseño_4.png" alt="Diseño 4" class="diseño"></div>
-        <div><img src="../images/diseño_5.png" alt="Diseño 5" class="diseño"></div>
-        <div><img src="../images/diseño_6.png" alt="Diseño 6" class="diseño"></div>
-        <div><img src="../images/diseño_7.png" alt="Diseño 7" class="diseño"></div>
-        <div><img src="../images/diseño_8.png" alt="Diseño 8" class="diseño"></div>
-      </div>
-    </aside>
-
-    <section id="principal_configurador">
-      <div id="vista">
-        <h3>VISTA PREVIA</h3>
-        <img src="../images/producto_3.png" alt="Producto">
-      </div>
-      <div id="precio">
-        <h3>PRECIO</h3>
-        <p>$6500,00</p>
-        <div class="carrito">
-          <img src="../images/carrito.png" alt="Carrito">
+  <main class="main_configurador">
+    <div class="row m-0">
+      <!-- Selectores de configuracion -->
+      <section class="col-12 col-md-3 lateral">
+        
+        <div class="dropdown-center">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Categoria</button>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">Baño</li>            
+            <li class="dropdown-item">Cocina & comedor</li>
+            <li class="dropdown-item">Complementos</li>
+            <li class="dropdown-item">Living & dormitorio</li>
+            <li class="dropdown-item">Materas y lonas</li>
+          </ul>
         </div>
-      </div>
-    </section>
+        <div class="dropdown-center">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Producto</button>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">Contenedores</li>
+            <li class="dropdown-item">Manteles</li>
+            <li class="dropdown-item">Cortinas</li>
+            <li class="dropdown-item">Servilletas</li>
+            <li class="dropdown-item">Bolsos</li>
+            <li class="dropdown-item">Mochilas</li>
+            <li class="dropdown-item">Cortinas</li>
+            <li class="dropdown-item">Almohadones</li>
+            <li class="dropdown-item">Lonas</li>
+            <li class="dropdown-item">Materas</li>
+          </ul>
+        </div>
+        <div class="dropdown-center">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Medida</button>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item">160 x 160</li>
+            <li class="dropdown-item">80 x 80</li>
+            <li class="dropdown-item">100 x 50</li>
+            <li class="dropdown-item">150 x 80</li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Diseño</button>
+          <ul class="dropdown-menu">
+            <li class=><img src="../images/diseño_1.png" alt="Diseño 1" class="diseño"></li>
+            <li class=><img src="../images/diseño_2.png" alt="Diseño 2" class="diseño"></li>
+            <li class=><img src="../images/diseño_3.png" alt="Diseño 3" class="diseño"></li>
+            <li class=><img src="../images/diseño_4.png" alt="Diseño 4" class="diseño"></li>
+            <li class=><img src="../images/diseño_5.png" alt="Diseño 5" class="diseño"></li>
+            <li class=><img src="../images/diseño_6.png" alt="Diseño 6" class="diseño"></li>
+            <li class=><img src="../images/diseño_7.png" alt="Diseño 7" class="diseño"></li>
+            <li class=><img src="../images/diseño_8.png" alt="Diseño 8" class="diseño"></li>
+            </ul>
+        </div>
+      </section>
+
+
+
+
+  
+      <section class="col-12 col-md" id="principal_configurador">
+        <div id="vista">
+          <h3>VISTA PREVIA</h3>
+          <img src="../images/producto_3.png" alt="Producto">
+        </div>
+        <div id="precio">
+          <h3>PRECIO</h3>
+          <p>$6500,00</p>
+          <div class="carrito">
+            <img src="../images/carrito.png" alt="Carrito">
+          </div>
+        </div>
+      </section>
+
+    </div>
 
   </main>
 </body>
