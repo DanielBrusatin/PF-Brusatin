@@ -112,6 +112,10 @@ main .lateral nav ul li a {
   font-family: 'Sigmar', cursive;
   font-weight: 800;
 }
+.button:hover {
+  background-color: #FDA500;
+  color: white;
+}
 
 .principal_inicio .volver a {
   color: black;
@@ -196,6 +200,11 @@ main .lateral nav ul li a {
   bottom: 10px;
   right: 10px;
 }
+.carrito:hover {
+  background-color: #a2c200;
+  color: white;
+}
+
 
 /* Animacion de rotacion promo */
 @keyframes rotate {
@@ -334,16 +343,16 @@ main .lateral nav ul li a {
 }
 
 
-#principal_configurador {
+.principal_configurador {
   padding: 20px;
   display: flex;
 }
 
-#principal_configurador h3 {
+.principal_configurador h3 {
   font-family: 'Hahmlet', serif;
 }
 
-#principal_configurador #vista {
+.principal_configurador .vista {
   width: 220px;
   height: 250px;
   display: flex;
@@ -352,7 +361,7 @@ main .lateral nav ul li a {
   align-items: center;
 }
 
-#principal_configurador #precio {
+.principal_configurador .precio {
   width: 220px;
   height: 200px;
   display: flex;
@@ -361,71 +370,99 @@ main .lateral nav ul li a {
   align-items: center;
 }
 
-#principal_configurador p {
+.principal_configurador p {
   font-size: 25px;
   font-weight: 800;
 }
 
-#principal_configurador .carrito {
-  background-color: #C7DA64;
-  padding: 5px 15px;
-  border-radius: 50px;
+.principal_configurador .carrito {
+  padding: 5px 25px;
+  position: static;
 }
 
 /* Contacto */
-#principal_contacto {
+.principal_contacto {
   padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#principal_contacto p {
-  margin-bottom: 20px;
+.principal_contacto p {
+  font-size: large;
 }
 
-#principal_contacto #redes {
+.principal_contacto .redes {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  max-width: 100%;
 }
 
-#principal_contacto #redes div {
+.principal_contacto .redes div {
   padding: 15px;
+  max-width: 33%;
 }
 
-#principal_contacto form {
+.principal_contacto .redes div img {
+  max-width: 100%;
+}
+
+.principal_contacto form {
   background-color: #FAC462;
   padding: 15px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  border: 1px solid black;
 }
 
-#principal_contacto label {
+.principal_contacto form * {
   font-family: 'Sigmar', cursive;
-  padding-left: 3px;
 }
 
-#principal_contacto .bordes {
+.principal_contacto form .casillas {
   padding: 3px 5px;
-  border: solid 1px black;
   border-radius: 12px;
   margin-bottom: 5px;
+  background-color: white;
+  border-width: 2px;
+  border-style: inset;
+  border-color:rgb(133, 133, 133);
+  border-image: initial;
+
 }
 
-#principal_contacto #mensaje {
-  padding-top: 5px;
+.principal_contacto form .carrito {
+  position: static;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonborder;
+}
+form img {
+  height: 64px;
+  order: 1;
+  margin-left: 10px;
 }
 
-#principal_contacto button {
-  background-color: #C7DA64;
-  width: fit-content;
-  padding: 2px 5px;
-  border-radius: 10px;
+
+.principal_contacto form ol {
+  padding: 0px;
+  margin: 0px;
+}
+.principal_contacto form ol>:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+.principal_contacto form ol li {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+.principal_contacto form button {
+  position: static;
   align-self: flex-end;
-  font-family: 'Sigmar', cursive;
   font-weight: 800;
+}
+.principal_contacto form .preview p{
+  color: grey;
 }
 
 /* Carrito */
@@ -511,7 +548,6 @@ main .lateral nav ul li a {
   #lista div ul {
     flex-direction: column;
     margin-left: 30px;
-
   }
 
   .main_configurador .row {

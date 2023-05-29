@@ -36,11 +36,11 @@
     </nav>
   </header>
 
-  <main id="principal_contacto">
+  <main class="principal_contacto">
     <div>
       <p>Seguinos y contactanos a traves de nuestras redes sociales</p>
     </div>
-    <div id="redes">
+    <div class="redes">
       <div><a href="https://api.whatsapp.com/send/?phone=5491167414593&text&type=phone_number&app_absent=0"
           target="_blank"><img src="../images/wp.png" alt="Logo whatsapp"></a></div>
       <div><a href="https://www.instagram.com/design.koke/" target="_blank"><img src="../images/instagram.png"
@@ -56,21 +56,26 @@
     <!-- Formulario de contacto -->
     <form action="" method="get" enctype="application/x-www-form-urlencoded">
       <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" placeholder="Escribe tu nombre..." class="bordes">
+      <input type="text" id="nombre" placeholder="Escribe tu nombre..." class="casillas">
       <label for="telefono">Telefono</label>
-      <input type="text" id="telefono" placeholder="Escribe tu telefono..." class="bordes">
+      <input type="text" id="telefono" placeholder="Escribe tu telefono..." class="casillas">
       <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Escribe tu email..." class="bordes">
+      <input type="email" id="email" placeholder="Escribe tu email..." class="casillas">
       <label for="asunto">Asunto</label>
-      <input type="text" id="asunto" placeholder="Escribe el asunto..." class="bordes">
-      <label for="adjunto">Adjuntar imagen</label>
-      <input type="file" id="adjunto">
+      <input type="text" id="asunto" placeholder="Escribe el asunto..." class="casillas">
+      <label for="adjunto" class="carrito">Adjuntar imagenes (PNG, JPG)</label>
+      <input type="file" id="adjunto" name="adjunto" accept=".jpg, .jpeg, .png" multiple="" style="display: none;">
+      <div class="preview casillas">
+        <p>Adjuntar imagenes...</p>
+      </div>
       <label for="mensaje">Mensaje</label>
       <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escribe tu mensaje..."
-        class="bordes"></textarea>
-      <button type="submit">ENVIAR</button>
+        class="casillas"></textarea>
+      <button type="submit" class="carrito">ENVIAR</button>
     </form>
   </main>
+
+  <script src="../js/main.js"></script>
 </body>
 
 </html>
