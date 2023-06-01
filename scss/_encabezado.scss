@@ -1,0 +1,28 @@
+/* Encabezado */
+header {
+  background-image: url(../images/sandia.jpg);
+  .navbar {
+    button {
+      background-color: $naranja-claro;
+      border: 3px solid $naranja-oscuro;
+    }
+    .navbar-nav {
+      li {
+        background-color: $naranja-claro;
+        border-bottom: 3px solid $naranja-oscuro;
+        a {
+          font-family: 'Sigmar', cursive;
+          color: white;
+          font-weight: 900;
+          text-align: center;
+        }
+        &.current {
+          background-color: $naranja-oscuro;
+        }
+      }
+    }
+  }
+}
+
+
+

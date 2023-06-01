@@ -1,162 +1,13 @@
-@charset "UTF-8";
-/***********/
-/* Colores */
-/***********/
-/**************************/
-/* Importación de fuentes */
-/**************************/
-@import url("https://fonts.googleapis.com/css2?family=Hahmlet&family=Inter&display=swap");
-/*************/
-/* Reset CSS */
-/*************/
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-  list-style: none;
-}
+@import "variables";
+@import "generales";
+@import "encabezado";
+@import "barra-lateral";
 
-/***********************************/
-/* Altura minima de 100 % viewport */
-/***********************************/
-body {
-  min-height: 100vh;
-}
 
-/********************/
-/* Cuerpo principal */
-/********************/
-main {
-  background-color: #F8E3E8;
-}
-
-/***********/
-/* Tarjeta */
-/***********/
-.carta {
-  background-color: white;
-  width: 210px;
-  height: 400px;
-  padding: 5px;
-  position: relative;
-  box-shadow: 0px 0px 10px #000000;
-  margin: 10px;
-}
-.carta img {
-  width: 100%;
-}
-.carta p {
-  margin: 0px;
-}
-.carta p.promo {
-  background-color: white;
-  color: #ff0000;
-  text-align: center;
-  font-size: 10px;
-  position: absolute;
-  top: 25px;
-  left: 20px;
-  transform: translate(4px, 17px) rotate(-45deg);
-  animation: rotate 4s infinite;
-}
-.carta p.actual {
-  font-size: 25px;
-}
-.carta p .tachado {
-  text-decoration: line-through 1px #ff0000;
-}
-.carta p .cent {
-  vertical-align: text-top;
-  font-size: 0.5em;
-}
-
-/***************/
-/* Boton verde */
-/***************/
-.carrito {
-  background-color: #C7DA64;
-  border-radius: 50px;
-  padding: 5px 10px;
-  box-shadow: inset 0px 0px 10px #000000;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-}
-.carrito:hover {
-  background-color: #A2C200;
-  color: white;
-}
-
-/*****************/
-/* Boton naranja */
-/*****************/
-.button {
-  background-color: #FAC462;
-  border-radius: 20px;
-  box-shadow: inset 0px 0px 10px #000000;
-  padding: 2px 5px;
-  font-family: "Sigmar", cursive;
-  font-weight: 800;
-}
-.button:hover {
-  background-color: #FDA500;
-  color: white;
-}
-
-/* Encabezado */
-header {
-  background-image: url(../images/sandia.jpg);
-}
-header .navbar button {
-  background-color: #FAC462;
-  border: 3px solid #FDA500;
-}
-header .navbar .navbar-nav li {
-  background-color: #FAC462;
-  border-bottom: 3px solid #FDA500;
-}
-header .navbar .navbar-nav li a {
-  font-family: "Sigmar", cursive;
-  color: white;
-  font-weight: 900;
-  text-align: center;
-}
-header .navbar .navbar-nav li.current {
-  background-color: #FDA500;
-}
-
-/****************/
-/* Menú lateral */
-/****************/
-main .lateral {
-  background-color: #C7DA64;
-  padding: 0px;
-}
-main .lateral * {
-  font-family: "Sigmar", cursive;
-}
-main .lateral nav ul {
-  margin: 0px;
-  padding: 0px;
-  display: flex;
-  flex-wrap: wrap;
-}
-main .lateral nav ul li {
-  flex: 50%;
-  text-align: center;
-  padding: 0px 5px;
-}
-main .lateral nav ul li a {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: center;
-}
 
 /* Articulo principal inicio */
 .principal_inicio h2 {
-  font-family: "Hahmlet", serif;
+  font-family: 'Hahmlet', serif;
   margin: 20px 0px;
 }
 
@@ -173,6 +24,7 @@ main .lateral nav ul li a {
   margin: 20px;
 }
 
+
 .principal_inicio .volver a {
   color: black;
   text-decoration: none;
@@ -187,7 +39,7 @@ main .lateral nav ul li a {
   justify-content: center;
 }
 
-#ofertas_semanales > div {
+#ofertas_semanales>div {
   justify-content: space-around;
 }
 
@@ -196,18 +48,24 @@ main .lateral nav ul li a {
   border-radius: 10px;
 }
 
+
+
+
 /* Animacion de rotacion promo */
 @keyframes rotate {
   0% {
     transform: rotate(-45deg);
   }
+
   50% {
     transform: rotate(45deg) scale(150%);
   }
+
   100% {
     transform: rotate(-45deg);
   }
 }
+
 /* Mapa */
 #mapa {
   display: flex;
@@ -234,7 +92,6 @@ main .lateral nav ul li a {
 .lista {
   padding: 0px;
 }
-
 .lista * {
   color: black;
 }
@@ -253,26 +110,22 @@ main .lateral nav ul li a {
 .lateral .dropdown-center {
   flex: auto;
 }
-
 .lateral .dropdown-center button,
 .lateral .dropdown button {
   width: 100%;
   border: solid 2px #a2c200;
   font-weight: bolder;
 }
-
 .lateral .dropdown-center ul,
 .lateral .dropdown ul {
   background-color: #C7DA64;
   border: solid 2px #a2c200;
 }
-
 .lateral .dropdown .dropdown-menu.show {
-  display: flex;
+  display:flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
 .lateral .dropdown .dropdown-menu li {
   margin: 10px;
 }
@@ -284,10 +137,9 @@ main .lateral nav ul li a {
 }
 
 .principal_tienda h2 {
-  font-family: "Hahmlet", serif;
+  font-family: 'Hahmlet', serif;
   margin-bottom: 10px;
 }
-
 .principal_tienda form {
   align-self: center;
   background-color: white;
@@ -295,26 +147,22 @@ main .lateral nav ul li a {
   padding: 5px;
   margin-bottom: 10px;
 }
-
 .principal_tienda form img {
   vertical-align: text-top;
 }
-
 .principal_tienda form * {
   background: none;
   padding-right: 3px;
   border: none;
 }
-
 .principal_tienda .paginas {
   align-self: flex-end;
   margin-bottom: 20px;
   margin-top: 10px;
 }
-
 .principal_tienda .carta {
   height: 360px;
-  max-width: calc((100vw - 80px) / 2);
+  max-width: calc((100vw - 80px)/2);
   max-height: calc(100vw - 80px);
 }
 
@@ -334,7 +182,7 @@ main .lateral nav ul li a {
 }
 
 .principal_configurador h3 {
-  font-family: "Hahmlet", serif;
+  font-family: 'Hahmlet', serif;
 }
 
 .principal_configurador .vista {
@@ -401,7 +249,7 @@ main .lateral nav ul li a {
 }
 
 .principal_contacto form * {
-  font-family: "Sigmar", cursive;
+  font-family: 'Sigmar', cursive;
 }
 
 .principal_contacto form .casillas {
@@ -411,8 +259,9 @@ main .lateral nav ul li a {
   background-color: white;
   border-width: 2px;
   border-style: inset;
-  border-color: rgb(133, 133, 133);
+  border-color:rgb(133, 133, 133);
   border-image: initial;
+
 }
 
 .principal_contacto form .carrito {
@@ -421,7 +270,6 @@ main .lateral nav ul li a {
   border-style: outset;
   border-color: buttonborder;
 }
-
 form img {
   max-height: 64px;
   order: 1;
@@ -432,24 +280,20 @@ form img {
   padding: 0px;
   margin: 0px;
 }
-
-.principal_contacto form ol > :not(:last-child) {
+.principal_contacto form ol>:not(:last-child) {
   border-bottom: 1px solid black;
 }
-
 .principal_contacto form ol li {
   display: flex;
   justify-content: space-between;
   background-color: white;
 }
-
 .principal_contacto form button {
   position: static;
   align-self: flex-end;
   font-weight: 800;
 }
-
-.principal_contacto form .preview p {
+.principal_contacto form .preview p{
   color: grey;
 }
 
@@ -505,7 +349,7 @@ form img {
 .principal_carrito .carrito {
   position: static;
   align-self: flex-end;
-  font-family: "Sigmar", cursive;
+  font-family: 'Sigmar', cursive;
   font-weight: 800;
 }
 
@@ -513,35 +357,41 @@ form img {
   header .navbar div .menu {
     justify-content: flex-end;
   }
+
   header .navbar .navbar-nav li {
-    border: 5px solid rgba(255, 255, 255, 0);
+    border: 5px solid #ffffff00;
     border-radius: 40px;
     margin: 5px;
   }
+
   header .navbar .navbar-nav li:hover {
     border: 5px solid rgb(253, 165, 0);
   }
+
   main .lateral nav ul {
     flex-direction: column;
   }
+
   main .lateral nav ul li {
     text-align: left;
     margin: 5px 0px;
   }
+
   #pago {
     display: flex;
     justify-content: space-evenly;
   }
+
   .main_configurador .row {
     min-height: 100%;
   }
+  
   .lateral .dropdown ul {
     width: 200%;
   }
+
   .principal_carrito {
     padding-left: 200px;
     padding-right: 200px;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,103 @@
+/**************************/
+/* Importación de fuentes */
+/**************************/
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Inter&display=swap');
+
+/*************/
+/* Reset CSS */
+/*************/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  list-style: none;
+}
+
+/***********************************/
+/* Altura minima de 100 % viewport */
+/***********************************/
+body {
+  min-height: 100vh;
+}
+
+/********************/
+/* Cuerpo principal */
+/********************/
+main {
+  background-color: $rosa;
+}
+
+/***********/
+/* Tarjeta */
+/***********/
+.carta {
+  background-color: white;
+  width: 210px;
+  height: 400px;
+  padding: 5px;
+  position: relative;
+  box-shadow: 0px 0px 10px #000000;
+  margin: 10px;
+  img {
+    width: 100%;
+  }
+  p {
+    margin: 0px;
+    &.promo {
+      background-color: white;
+      color: #ff0000;
+      text-align: center;
+      font-size: 10px;
+      position: absolute;
+      top: 25px;
+      left: 20px;
+      transform: translate(4px, 17px) rotate(-45deg);
+      animation: rotate 4s infinite;
+    }
+    &.actual {
+      font-size: 25px;
+    }
+    .tachado {
+      text-decoration: line-through 1px #ff0000;
+    }
+    .cent {
+      vertical-align: text-top;
+      font-size: 0.5em;
+    }
+  }
+}
+
+/***************/
+/* Boton verde */
+/***************/
+.carrito {
+  background-color: $verde-claro;
+  border-radius: 50px;
+  padding: 5px 10px;
+  box-shadow: inset 0px 0px 10px #000000;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  &:hover {
+    background-color: $verde-oscuro;
+    color: white;
+  }
+}
+
+/*****************/
+/* Boton naranja */
+/*****************/
+.button {
+  background-color: $naranja-claro;
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 10px #000000;
+  padding: 2px 5px;
+  font-family: 'Sigmar', cursive;
+  font-weight: 800;
+  &:hover {
+    background-color: $naranja-oscuro;
+    color: white;
+  }
+}
+
