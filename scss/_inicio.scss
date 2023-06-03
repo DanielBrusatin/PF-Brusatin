@@ -1,0 +1,64 @@
+/*****************************/
+/* Articulo principal inicio */
+/*****************************/
+.principal_inicio {
+  article {
+    h2 {
+      font-family: 'Hahmlet', serif;
+      margin: 20px 0px;
+    }
+    p {
+      font-size: large;
+      line-height: 1.5;
+      text-align: justify;
+    }
+    .volver {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+  }
+  #ofertas_semanales {
+    >div {
+      justify-content: space-around;
+    }
+    .carousel {
+      button {
+        span {
+          background-color: $naranja-oscuro;
+          border-radius: 10px;
+        }
+      }
+      .carousel-inner {
+        .carousel-item.active,
+        .carousel-item-next,
+        .carousel-item-prev {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  #metodos_de_entrega {
+    .mapa {
+      display: flex;
+      justify-content: center;
+      iframe {
+        max-width: 100%;
+      }
+    }
+  }
+  #medios_de_pago {
+    .pago {
+      .tipo_pago {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        p {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

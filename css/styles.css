@@ -153,50 +153,296 @@ main .lateral nav ul li a {
   font-weight: bold;
   text-align: center;
 }
+main .lateral .lista {
+  padding: 0px;
+}
+main .lateral .lista * {
+  color: black;
+}
+main .lateral .lista p {
+  font-size: larger;
+  font-weight: bolder;
+  margin: 10px 10px 0px;
+}
+main .lateral .lista .sub_lista li a {
+  font-weight: 400;
+  margin-left: 15px;
+}
+main .lateral .dropdown-center {
+  flex: auto;
+}
+main .lateral .dropdown .dropdown-menu.show {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main .lateral .dropdown .dropdown-menu li {
+  margin: 10px;
+}
+main .lateral .dropdown .dropdown-menu li img {
+  width: 100px;
+}
+main .lateral .dropdown button, main .lateral .dropdown-center button {
+  width: 100%;
+  border: solid 2px #A2C200;
+  font-weight: bolder;
+}
+main .lateral .dropdown ul, main .lateral .dropdown-center ul {
+  background-color: #C7DA64;
+  border: solid 2px #A2C200;
+}
 
+/*****************************/
 /* Articulo principal inicio */
-.principal_inicio h2 {
+/*****************************/
+.principal_inicio article h2 {
   font-family: "Hahmlet", serif;
   margin: 20px 0px;
 }
-
-.principal_inicio p {
+.principal_inicio article p {
   font-size: large;
   line-height: 1.5;
   text-align: justify;
 }
-
-/* Boton Subir */
-.principal_inicio .volver {
+.principal_inicio article .volver {
   display: flex;
   justify-content: center;
   margin: 20px;
 }
-
-.principal_inicio .volver a {
-  color: black;
-  text-decoration: none;
-  padding: 4px;
+.principal_inicio #ofertas_semanales > div {
+  justify-content: space-around;
 }
-
-/* Slider ofertas */
-.carousel-item.active,
-.carousel-item-next,
-.carousel-item-prev {
+.principal_inicio #ofertas_semanales .carousel button span {
+  background-color: #FDA500;
+  border-radius: 10px;
+}
+.principal_inicio #ofertas_semanales .carousel .carousel-inner .carousel-item.active,
+.principal_inicio #ofertas_semanales .carousel .carousel-inner .carousel-item-next,
+.principal_inicio #ofertas_semanales .carousel .carousel-inner .carousel-item-prev {
   display: flex;
   justify-content: center;
 }
-
-#ofertas_semanales > div {
-  justify-content: space-around;
+.principal_inicio #metodos_de_entrega .mapa {
+  display: flex;
+  justify-content: center;
+}
+.principal_inicio #metodos_de_entrega .mapa iframe {
+  max-width: 100%;
+}
+.principal_inicio #medios_de_pago .pago .tipo_pago {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.principal_inicio #medios_de_pago .pago .tipo_pago p {
+  margin-bottom: 10px;
 }
 
-#ofertas_semanales .carousel button span {
+/*****************************/
+/* Articulo principal tienda */
+/*****************************/
+.principal_tienda {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+.principal_tienda form {
+  align-self: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.principal_tienda form * {
+  background: none;
+  padding-right: 3px;
+  border: none;
+}
+.principal_tienda form img {
+  vertical-align: text-top;
+}
+.principal_tienda h2 {
+  font-family: "Hahmlet", serif;
+  margin-bottom: 10px;
+}
+.principal_tienda .paginas {
+  align-self: flex-end;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.principal_tienda div .carta {
+  height: 360px;
+  max-width: calc((100vw - 80px) / 2);
+  max-height: calc(100vw - 80px);
+}
+
+/***********************************/
+/* Articulo principal configurador */
+/***********************************/
+.main_configurador {
+  height: calc(100vh - 166px);
+}
+.main_configurador .principal_configurador {
+  padding: 20px;
+  display: flex;
+}
+.main_configurador .principal_configurador h3 {
+  font-family: "Hahmlet", serif;
+}
+.main_configurador .principal_configurador .vista {
+  width: 220px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_configurador .principal_configurador .precio {
+  width: 220px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_configurador .principal_configurador .precio p {
+  font-size: 25px;
+  font-weight: 800;
+}
+.main_configurador .principal_configurador .precio .carrito {
+  padding: 5px 25px;
+  position: static;
+}
+
+/*******************************/
+/* Articulo principal contacto */
+/*******************************/
+.principal_contacto {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.principal_contacto p {
+  font-size: large;
+}
+.principal_contacto .redes {
+  display: flex;
+  max-width: 100%;
+}
+.principal_contacto .redes div {
+  padding: 15px;
+  max-width: 33%;
+}
+.principal_contacto .redes div a img {
+  max-width: 100%;
+}
+.principal_contacto form {
   background-color: #FAC462;
-  border-radius: 10px;
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.principal_contacto form * {
+  font-family: "Sigmar", cursive;
+}
+.principal_contacto form .casillas {
+  padding: 3px 5px;
+  border-radius: 12px;
+  margin-bottom: 5px;
+  background-color: white;
+  border-width: 2px;
+  border-style: inset;
+  border-color: grey;
+  border-image: initial;
+}
+.principal_contacto form .carrito {
+  position: static;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonborder;
+}
+.principal_contacto form .preview p {
+  color: grey;
+}
+.principal_contacto form .preview ol {
+  padding: 0px;
+  margin: 0px;
+}
+.principal_contacto form .preview ol > :not(:last-child) {
+  border-bottom: 1px solid black;
+}
+.principal_contacto form .preview ol li {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+.principal_contacto form .preview ol li img {
+  max-height: 64px;
+  order: 1;
+  margin-left: 10px;
+}
+.principal_contacto form button {
+  position: static;
+  align-self: flex-end;
+  font-weight: 800;
 }
 
+/******************************/
+/* Articulo principal carrito */
+/******************************/
+.principal_carrito {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.principal_carrito .productos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: solid 1px black;
+  margin-bottom: 20px;
+}
+.principal_carrito .productos:nth-last-child(3) {
+  border-bottom: solid 4px black;
+}
+.principal_carrito .productos img {
+  width: 100px;
+}
+.principal_carrito .productos p {
+  padding-left: 8px;
+  margin: 0px;
+}
+.principal_carrito .productos div {
+  display: flex;
+  align-items: center;
+}
+.principal_carrito .productos div .carrito img {
+  width: 25px;
+}
+.principal_carrito .total {
+  display: flex;
+  justify-content: flex-end;
+}
+.principal_carrito .total p {
+  padding-left: 30px;
+  font-size: large;
+  font-weight: 800;
+}
+.principal_carrito .carrito {
+  position: static;
+  align-self: flex-end;
+  font-family: "Sigmar", cursive;
+  font-weight: 800;
+}
+
+/*******************************/
 /* Animacion de rotacion promo */
+/*******************************/
 @keyframes rotate {
   0% {
     transform: rotate(-45deg);
@@ -208,307 +454,6 @@ main .lateral nav ul li a {
     transform: rotate(-45deg);
   }
 }
-/* Mapa */
-#mapa {
-  display: flex;
-  justify-content: center;
-}
-
-#mapa iframe {
-  max-width: 100%;
-}
-
-/* Medios de pago */
-#pago .tipo_pago {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
-}
-
-#pago .tipo_pago p {
-  margin-bottom: 10px;
-}
-
-/* Tienda */
-.lista {
-  padding: 0px;
-}
-
-.lista * {
-  color: black;
-}
-
-.lista p {
-  font-size: larger;
-  font-weight: bolder;
-  margin: 10px 10px 0px;
-}
-
-.lista .sub_lista li a {
-  font-weight: 400;
-  margin-left: 15px;
-}
-
-.lateral .dropdown-center {
-  flex: auto;
-}
-
-.lateral .dropdown-center button,
-.lateral .dropdown button {
-  width: 100%;
-  border: solid 2px #a2c200;
-  font-weight: bolder;
-}
-
-.lateral .dropdown-center ul,
-.lateral .dropdown ul {
-  background-color: #C7DA64;
-  border: solid 2px #a2c200;
-}
-
-.lateral .dropdown .dropdown-menu.show {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.lateral .dropdown .dropdown-menu li {
-  margin: 10px;
-}
-
-.principal_tienda {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 20px;
-}
-
-.principal_tienda h2 {
-  font-family: "Hahmlet", serif;
-  margin-bottom: 10px;
-}
-
-.principal_tienda form {
-  align-self: center;
-  background-color: white;
-  border-radius: 20px;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-
-.principal_tienda form img {
-  vertical-align: text-top;
-}
-
-.principal_tienda form * {
-  background: none;
-  padding-right: 3px;
-  border: none;
-}
-
-.principal_tienda .paginas {
-  align-self: flex-end;
-  margin-bottom: 20px;
-  margin-top: 10px;
-}
-
-.principal_tienda .carta {
-  height: 360px;
-  max-width: calc((100vw - 80px) / 2);
-  max-height: calc(100vw - 80px);
-}
-
-/* Configurador */
-.main_configurador {
-  height: calc(100vh - 166px);
-}
-
-.lateral img {
-  width: 100px;
-  display: flex;
-}
-
-.principal_configurador {
-  padding: 20px;
-  display: flex;
-}
-
-.principal_configurador h3 {
-  font-family: "Hahmlet", serif;
-}
-
-.principal_configurador .vista {
-  width: 220px;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.principal_configurador .precio {
-  width: 220px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.principal_configurador p {
-  font-size: 25px;
-  font-weight: 800;
-}
-
-.principal_configurador .carrito {
-  padding: 5px 25px;
-  position: static;
-}
-
-/* Contacto */
-.principal_contacto {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.principal_contacto p {
-  font-size: large;
-}
-
-.principal_contacto .redes {
-  display: flex;
-  max-width: 100%;
-}
-
-.principal_contacto .redes div {
-  padding: 15px;
-  max-width: 33%;
-}
-
-.principal_contacto .redes div img {
-  max-width: 100%;
-}
-
-.principal_contacto form {
-  background-color: #FAC462;
-  padding: 15px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-}
-
-.principal_contacto form * {
-  font-family: "Sigmar", cursive;
-}
-
-.principal_contacto form .casillas {
-  padding: 3px 5px;
-  border-radius: 12px;
-  margin-bottom: 5px;
-  background-color: white;
-  border-width: 2px;
-  border-style: inset;
-  border-color: rgb(133, 133, 133);
-  border-image: initial;
-}
-
-.principal_contacto form .carrito {
-  position: static;
-  border-width: 2px;
-  border-style: outset;
-  border-color: buttonborder;
-}
-
-form img {
-  max-height: 64px;
-  order: 1;
-  margin-left: 10px;
-}
-
-.principal_contacto form ol {
-  padding: 0px;
-  margin: 0px;
-}
-
-.principal_contacto form ol > :not(:last-child) {
-  border-bottom: 1px solid black;
-}
-
-.principal_contacto form ol li {
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-}
-
-.principal_contacto form button {
-  position: static;
-  align-self: flex-end;
-  font-weight: 800;
-}
-
-.principal_contacto form .preview p {
-  color: grey;
-}
-
-/* Carrito */
-.principal_carrito {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.principal_carrito .productos {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 10px;
-  border-bottom: solid 1px black;
-  margin-bottom: 20px;
-}
-
-.principal_carrito .productos:nth-last-child(3) {
-  border-bottom: solid 4px black;
-}
-
-.principal_carrito .productos p {
-  padding-left: 8px;
-  margin: 0px;
-}
-
-.principal_carrito .productos img {
-  width: 100px;
-}
-
-.principal_carrito .productos div {
-  display: flex;
-  align-items: center;
-}
-
-.principal_carrito .productos .carrito img {
-  width: 25px;
-}
-
-.principal_carrito .total {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.principal_carrito .total p {
-  padding-left: 30px;
-  font-size: large;
-  font-weight: 800;
-}
-
-.principal_carrito .carrito {
-  position: static;
-  align-self: flex-end;
-  font-family: "Sigmar", cursive;
-  font-weight: 800;
-}
-
 @media screen and (min-width: 768px) {
   header .navbar div .menu {
     justify-content: flex-end;
@@ -519,7 +464,7 @@ form img {
     margin: 5px;
   }
   header .navbar .navbar-nav li:hover {
-    border: 5px solid rgb(253, 165, 0);
+    border: 5px solid #FDA500;
   }
   main .lateral nav ul {
     flex-direction: column;

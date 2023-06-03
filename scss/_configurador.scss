@@ -1,0 +1,37 @@
+/***********************************/
+/* Articulo principal configurador */
+/***********************************/
+.main_configurador {
+  height: calc(100vh - 166px);
+  .principal_configurador {
+    padding: 20px;
+    display: flex;
+    h3 {
+      font-family: 'Hahmlet', serif;
+    }
+    .vista {
+      width: 220px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .precio {
+      width: 220px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      p {
+        font-size: 25px;
+        font-weight: 800;
+      }
+      .carrito {
+        padding: 5px 25px;
+        position: static;
+      }
+    }
+  }
+}

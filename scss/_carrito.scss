@@ -1,0 +1,51 @@
+/******************************/
+/* Articulo principal carrito */
+/******************************/
+.principal_carrito {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  .productos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: solid 1px black;
+    margin-bottom: 20px;
+    &:nth-last-child(3) {
+      border-bottom: solid 4px black;
+    }
+    img {
+      width: 100px;
+    }
+    p {
+      padding-left: 8px;
+      margin: 0px;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      .carrito img {
+        width: 25px;
+      }
+    }
+  }
+  .total {
+    display: flex;
+    justify-content: flex-end;
+    p {
+      padding-left: 30px;
+      font-size: large;
+      font-weight: 800;
+    }
+  }
+  .carrito {
+    position: static;
+    align-self: flex-end;
+    font-family: 'Sigmar', cursive;
+    font-weight: 800;
+  }
+}
+
+
+

@@ -3,7 +3,7 @@
 /****************/
 main {
   .lateral {
-    background-color: #C7DA64;
+    background-color: $verde-claro;
     padding: 0px;
     * {
     font-family: 'Sigmar', cursive;
@@ -27,5 +27,57 @@ main {
         }
       }
     }
+    .lista {
+      padding: 0px;
+      * {  
+        color: black;
+      }
+      p {
+        font-size: larger;
+        font-weight: bolder;
+        margin: 10px 10px 0px;
+      }
+      .sub_lista {
+        li {
+          a {
+            font-weight: 400;
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+    .dropdown-center {
+      flex: auto;
+    }
+    .dropdown{
+      .dropdown-menu {
+        &.show {
+          display:flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+        }
+        li {
+          margin: 10px;
+          img {
+            width: 100px;
+          }
+          
+        }
+      }
+    }
+    .dropdown, .dropdown-center {
+      button {
+        width: 100%;
+        border: solid 2px $verde-oscuro;
+        font-weight: bolder;
+      }
+      ul {
+        background-color: $verde-claro;
+        border: solid 2px $verde-oscuro;
+      }
+    }
   }
 }
+
+
+

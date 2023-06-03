@@ -1,0 +1,84 @@
+/*******************************/
+/* Articulo principal contacto */
+/*******************************/
+.principal_contacto {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    font-size: large;
+  }
+  .redes {
+  display: flex;
+  max-width: 100%;
+  div {
+    padding: 15px;
+    max-width: 33%;
+    a {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  }
+  form {
+    background-color: $naranja-claro;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    * {
+      font-family: 'Sigmar', cursive;
+    }
+    .casillas {
+      padding: 3px 5px;
+      border-radius: 12px;
+      margin-bottom: 5px;
+      background-color: white;
+      border-width: 2px;
+      border-style: inset;
+      border-color:grey;
+      border-image: initial;
+    }
+    .carrito {
+      position: static;
+      border-width: 2px;
+      border-style: outset;
+      border-color: buttonborder;
+    }
+    .preview {
+      p{
+        color: grey;
+      }
+      ol {
+        padding: 0px;
+        margin: 0px;
+        >:not(:last-child) {
+          border-bottom: 1px solid black;
+        }
+        li {
+          display: flex;
+          justify-content: space-between;
+          background-color: white;
+          img {
+            max-height: 64px;
+            order: 1;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    button {
+      position: static;
+      align-self: flex-end;
+      font-weight: 800;
+    }
+  }
+}
+
+
+
+
+

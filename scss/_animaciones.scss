@@ -1,0 +1,16 @@
+/*******************************/
+/* Animacion de rotacion promo */
+/*******************************/
+@keyframes rotate {
+  0% {
+    transform: rotate(-45deg);
+  }
+
+  50% {
+    transform: rotate(45deg) scale(150%);
+  }
+
+  100% {
+    transform: rotate(-45deg);
+  }
+}

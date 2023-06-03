@@ -1,0 +1,39 @@
+/*****************************/
+/* Articulo principal tienda */
+/*****************************/
+.principal_tienda {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  form {
+    align-self: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    margin-bottom: 10px;
+    * {
+      background: none;
+      padding-right: 3px;
+      border: none;
+    }
+    img {
+      vertical-align: text-top;
+    }
+  }
+  h2 {
+    font-family: 'Hahmlet', serif;
+    margin-bottom: 10px;
+  }
+  .paginas {
+    align-self: flex-end;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  div {
+    .carta {
+      height: 360px;
+      max-width: calc((100vw - 80px)/2);
+      max-height: calc(100vw - 80px);
+    }
+  }
+}
