@@ -74,10 +74,33 @@ main {
       ul {
         background-color: $verde-claro;
         border: solid 2px $verde-oscuro;
+        li:hover {
+          background-color: $verde-oscuro;
+        }
       }
     }
   }
 }
 
+@media screen and (min-width: 768px) {
+  main {
+    .lateral {
+      nav {
+        ul {
+          flex-direction: column;
+          li {
+            text-align: left;
+            margin: 5px 0px;
+          }
+        }
+      }
+      .dropdown {
+        ul {
+          width: 200%;
+        }
+      }
+    }
+  }
+}
 
 

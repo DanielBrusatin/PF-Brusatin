@@ -3,14 +3,14 @@
 /*******************************/
 @keyframes rotate {
   0% {
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) scale(150%);
   }
 
   50% {
-    transform: rotate(45deg) scale(150%);
+    transform: rotate(45deg);
   }
 
   100% {
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) scale(150%);
   }
 }

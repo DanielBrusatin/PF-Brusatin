@@ -28,7 +28,7 @@ body {
 /* Cuerpo principal */
 /********************/
 main {
-  background-color: #F8E3E8;
+  background-image: radial-gradient(circle, #F8E3E8, #fa9bb1);
 }
 
 /***********/
@@ -40,7 +40,7 @@ main {
   height: 400px;
   padding: 5px;
   position: relative;
-  box-shadow: 0px 0px 10px #000000;
+  box-shadow: 0px 0px 10px black;
   margin: 10px;
 }
 .carta img {
@@ -51,39 +51,45 @@ main {
 }
 .carta p.promo {
   background-color: white;
-  color: #ff0000;
+  color: red;
   text-align: center;
   font-size: 10px;
   position: absolute;
-  top: 25px;
-  left: 20px;
-  transform: translate(4px, 17px) rotate(-45deg);
+  top: 30px;
+  left: 24px;
   animation: rotate 4s infinite;
 }
 .carta p.actual {
   font-size: 25px;
 }
 .carta p .tachado {
-  text-decoration: line-through 1px #ff0000;
+  text-decoration: line-through 1px red;
 }
 .carta p .cent {
   vertical-align: text-top;
   font-size: 0.5em;
 }
-
-/***************/
-/* Boton verde */
-/***************/
-.carrito {
-  background-color: #C7DA64;
-  border-radius: 50px;
-  padding: 5px 10px;
-  box-shadow: inset 0px 0px 10px #000000;
+.carta .boton--verde {
   position: absolute;
   bottom: 10px;
   right: 10px;
 }
-.carrito:hover {
+
+/*********/
+/* Boton */
+/*********/
+/***************/
+/* Boton verde */
+/***************/
+.boton--verde {
+  background-color: #C7DA64;
+  border-radius: 50px;
+  padding: 5px 10px;
+  box-shadow: inset 0px 0px 10px black;
+  font-family: "Sigmar", cursive;
+  font-weight: 800;
+}
+.boton--verde:hover {
   background-color: #A2C200;
   color: white;
 }
@@ -91,20 +97,22 @@ main {
 /*****************/
 /* Boton naranja */
 /*****************/
-.button {
+.boton--naranja {
   background-color: #FAC462;
-  border-radius: 20px;
-  box-shadow: inset 0px 0px 10px #000000;
-  padding: 2px 5px;
+  border-radius: 50px;
+  padding: 5px 10px;
+  box-shadow: inset 0px 0px 10px black;
   font-family: "Sigmar", cursive;
   font-weight: 800;
 }
-.button:hover {
+.boton--naranja:hover {
   background-color: #FDA500;
   color: white;
 }
 
+/**************/
 /* Encabezado */
+/**************/
 header {
   background-image: url(../images/sandia.jpg);
 }
@@ -125,7 +133,23 @@ header .navbar .navbar-nav li a {
 header .navbar .navbar-nav li.current {
   background-color: #FDA500;
 }
+header .navbar .navbar-nav li:last-child {
+  border: 0px;
+}
 
+@media screen and (min-width: 768px) {
+  header .navbar div .menu {
+    justify-content: flex-end;
+  }
+  header .navbar div .menu .navbar-nav li {
+    border: 5px solid rgba(255, 255, 255, 0);
+    border-radius: 40px;
+    margin: 5px;
+  }
+  header .navbar div .menu .navbar-nav li:hover {
+    border: 5px solid #FDA500;
+  }
+}
 /****************/
 /* Menú lateral */
 /****************/
@@ -191,7 +215,22 @@ main .lateral .dropdown ul, main .lateral .dropdown-center ul {
   background-color: #C7DA64;
   border: solid 2px #A2C200;
 }
+main .lateral .dropdown ul li:hover, main .lateral .dropdown-center ul li:hover {
+  background-color: #A2C200;
+}
 
+@media screen and (min-width: 768px) {
+  main .lateral nav ul {
+    flex-direction: column;
+  }
+  main .lateral nav ul li {
+    text-align: left;
+    margin: 5px 0px;
+  }
+  main .lateral .dropdown ul {
+    width: 200%;
+  }
+}
 /*****************************/
 /* Articulo principal inicio */
 /*****************************/
@@ -239,6 +278,12 @@ main .lateral .dropdown ul, main .lateral .dropdown-center ul {
   margin-bottom: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  .pago {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
 /*****************************/
 /* Articulo principal tienda */
 /*****************************/
@@ -310,11 +355,15 @@ main .lateral .dropdown ul, main .lateral .dropdown-center ul {
   font-size: 25px;
   font-weight: 800;
 }
-.main_configurador .principal_configurador .precio .carrito {
+.main_configurador .principal_configurador .precio .boton--verde {
   padding: 5px 25px;
-  position: static;
 }
 
+@media screen and (min-width: 768px) {
+  .main_configurador .row {
+    min-height: 100%;
+  }
+}
 /*******************************/
 /* Articulo principal contacto */
 /*******************************/
@@ -359,8 +408,7 @@ main .lateral .dropdown ul, main .lateral .dropdown-center ul {
   border-color: grey;
   border-image: initial;
 }
-.principal_contacto form .carrito {
-  position: static;
+.principal_contacto form .boton--verde {
   border-width: 2px;
   border-style: outset;
   border-color: buttonborder;
@@ -386,9 +434,7 @@ main .lateral .dropdown ul, main .lateral .dropdown-center ul {
   margin-left: 10px;
 }
 .principal_contacto form button {
-  position: static;
   align-self: flex-end;
-  font-weight: 800;
 }
 
 /******************************/
@@ -410,9 +456,6 @@ main .lateral .dropdown ul, main .lateral .dropdown-center ul {
 .principal_carrito .productos:nth-last-child(3) {
   border-bottom: solid 4px black;
 }
-.principal_carrito .productos img {
-  width: 100px;
-}
 .principal_carrito .productos p {
   padding-left: 8px;
   margin: 0px;
@@ -421,8 +464,11 @@ main .lateral .dropdown ul, main .lateral .dropdown-center ul {
   display: flex;
   align-items: center;
 }
-.principal_carrito .productos div .carrito img {
-  width: 25px;
+.principal_carrito .productos div > img {
+  width: 100px;
+}
+.principal_carrito .productos div > img:hover {
+  transform: scale(2);
 }
 .principal_carrito .total {
   display: flex;
@@ -433,59 +479,28 @@ main .lateral .dropdown ul, main .lateral .dropdown-center ul {
   font-size: large;
   font-weight: 800;
 }
-.principal_carrito .carrito {
-  position: static;
+.principal_carrito .boton--verde {
   align-self: flex-end;
-  font-family: "Sigmar", cursive;
-  font-weight: 800;
 }
 
+@media screen and (min-width: 768px) {
+  .principal_carrito {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
 /*******************************/
 /* Animacion de rotacion promo */
 /*******************************/
 @keyframes rotate {
   0% {
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) scale(150%);
   }
   50% {
-    transform: rotate(45deg) scale(150%);
+    transform: rotate(45deg);
   }
   100% {
-    transform: rotate(-45deg);
-  }
-}
-@media screen and (min-width: 768px) {
-  header .navbar div .menu {
-    justify-content: flex-end;
-  }
-  header .navbar .navbar-nav li {
-    border: 5px solid rgba(255, 255, 255, 0);
-    border-radius: 40px;
-    margin: 5px;
-  }
-  header .navbar .navbar-nav li:hover {
-    border: 5px solid #FDA500;
-  }
-  main .lateral nav ul {
-    flex-direction: column;
-  }
-  main .lateral nav ul li {
-    text-align: left;
-    margin: 5px 0px;
-  }
-  #pago {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .main_configurador .row {
-    min-height: 100%;
-  }
-  .lateral .dropdown ul {
-    width: 200%;
-  }
-  .principal_carrito {
-    padding-left: 200px;
-    padding-right: 200px;
+    transform: rotate(-45deg) scale(150%);
   }
 }
 

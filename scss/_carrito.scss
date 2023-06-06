@@ -15,9 +15,6 @@
     &:nth-last-child(3) {
       border-bottom: solid 4px black;
     }
-    img {
-      width: 100px;
-    }
     p {
       padding-left: 8px;
       margin: 0px;
@@ -25,8 +22,11 @@
     div {
       display: flex;
       align-items: center;
-      .carrito img {
-        width: 25px;
+      >img {
+        width: 100px;
+        &:hover {
+          transform: scale(2);
+        }
       }
     }
   }
@@ -39,13 +39,15 @@
       font-weight: 800;
     }
   }
-  .carrito {
-    position: static;
+  .boton--verde {
     align-self: flex-end;
-    font-family: 'Sigmar', cursive;
-    font-weight: 800;
   }
 }
 
-
+@media screen and (min-width: 768px) {
+  .principal_carrito {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
 

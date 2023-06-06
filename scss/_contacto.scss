@@ -42,8 +42,7 @@
       border-color:grey;
       border-image: initial;
     }
-    .carrito {
-      position: static;
+    .boton--verde {
       border-width: 2px;
       border-style: outset;
       border-color: buttonborder;
@@ -71,9 +70,7 @@
       }
     }
     button {
-      position: static;
       align-self: flex-end;
-      font-weight: 800;
     }
   }
 }

@@ -1,4 +1,6 @@
+/**************/
 /* Encabezado */
+/**************/
 header {
   background-image: url(../images/sandia.jpg);
   .navbar {
@@ -18,6 +20,31 @@ header {
         }
         &.current {
           background-color: $naranja-oscuro;
+        }
+        &:last-child {
+          border: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    .navbar {
+      div {
+        .menu {
+          justify-content: flex-end;
+          .navbar-nav {
+            li {
+              border: 5px solid #ffffff00;
+              border-radius: 40px;
+              margin: 5px;
+              &:hover {
+                border: 5px solid $naranja-oscuro;
+              }
+            }
+          }
         }
       }
     }

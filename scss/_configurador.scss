@@ -28,10 +28,17 @@
         font-size: 25px;
         font-weight: 800;
       }
-      .carrito {
+      .boton--verde {
         padding: 5px 25px;
-        position: static;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main_configurador {
+    .row {
+      min-height: 100%;
     }
   }
 }
