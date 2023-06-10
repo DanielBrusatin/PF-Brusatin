@@ -145,9 +145,12 @@ header .navbar .navbar-nav li:last-child {
     border: 5px solid rgba(255, 255, 255, 0);
     border-radius: 40px;
     margin: 5px;
+    transition: all 1s cubic-bezier(0.1, 1.8, 0.65, 1.8);
   }
-  header .navbar div .menu .navbar-nav li:hover {
-    border: 5px solid #FDA500;
+  header .navbar div .menu .navbar-nav li:not(.current):hover {
+    transform: scale(1.2);
+    background-color: #FDA500;
+    z-index: 1;
   }
 }
 /****************/

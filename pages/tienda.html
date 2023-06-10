@@ -17,18 +17,20 @@
 </head>
 
 <body>
-  <!--Encabezado-->
+  <!-- ********** -->
+  <!-- Encabezado -->
+  <!-- ********** -->
   <header>
     <nav class="navbar navbar-expand-md">
       <div class="container-fluid justify-content-around">
         <div>
-          <img src="../images/logo.png" alt="Logo">
+          <img src="../images/logo.png" alt="Logo koke">
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#MenuNavegacion" aria-controls="MenuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
-          <ul class="navbar-nav mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse menu" id="MenuNavegacion">
+          <ul class="navbar-nav mt-2">
             <li class="nav-item"><a class="nav-link" href="../index.html">INICIO</a></li>
             <li class="nav-item current"><a class="nav-link" href="./tienda.html">TIENDA</a></li>
             <li class="nav-item"><a class="nav-link" href="./configurador.html">CONFIGURAR</a></li>
@@ -42,7 +44,9 @@
 
   <main>
     <div class="row m-0">
-      <!--Filtros de busqueda-->
+      <!-- ************ -->
+      <!-- Menú lateral -->
+      <!-- ************ -->
       <section class="col-12 col-md-auto lateral">
         <!-- Filtros para mobile -->
         <div class="d-flex flex-wrap d-md-none lista">
@@ -131,13 +135,14 @@
           </ul>
         </div>
       </section>
-  
-      <!--Articulo principal-->
+      <!-- ****************** -->
+      <!-- Articulo principal -->
+      <!-- ****************** -->
       <section class="col-12 col-md principal_tienda">
         <!-- Buscador -->
         <form action="" method="get" enctype="application/x-www-form-urlencoded">
           <input type="search" placeholder="Buscador...">
-          <button type="submit"><img src="../images/lupa.png" alt="Lupa"></button>
+          <button type="submit"><img src="../images/lupa.png" alt="Iniciar busqueda"></button>
         </form>
   
         <h2>Todas las publicaciones</h2>
@@ -148,126 +153,73 @@
         </div>
         <!-- Listado de productos -->
         <div class="d-flex flex-wrap justify-content-around">
-          <!--Contenedor de tarjeta-->
+          <!-- Contenedor de tarjeta -->
           <div class="carta" data-aos="flip-left">
-            <!--Imagen -->
-            <div><img src="../images/producto_1.png" alt="Producto 1"></div>
-            <!--Precio nuevo-->
-            <p class="actual">$2300.<span class="cent">00</span></p>
-            <!--Descripcion-->
-            <p>Cartuchera hojas aqua</p>
-            <!--Boton carrito-->
-            <button class="boton--verde">
-              <img src="../images/carrito.png" alt="Carrito">
-            </button>
+            <div><img src="../images/producto_1.png" alt="Producto 1"></div><!-- Imagen -->
+            <p class="actual">$2300.<span class="cent">00</span></p><!-- Precio nuevo -->
+            <p>Cartuchera hojas aqua</p><!-- Descripcion -->
+            <button class="boton--verde"><img src="../images/carrito.png" alt="Agregar al carrito"></button><!-- Boton carrito -->
           </div>
-          <!--Contenedor de tarjeta-->
+          <!-- Contenedor de tarjeta -->
           <div class="carta" data-aos="flip-left">
-            <!--Imagen -->
-            <img src="../images/producto_2.png" alt="Producto 2">
-            <!--Precio nuevo-->
-            <p class="actual">$7900.<span class="cent">00</span></p>
-            <!--Descripcion-->
-            <p>Cortina de baño con volado 180x180 cm</p>
-            <!--Boton carrito-->
-            <button class="boton--verde">
-              <img src="../images/carrito.png" alt="Carrito">
-            </button>
+            <img src="../images/producto_2.png" alt="Producto 2"><!-- Imagen -->
+            <p class="actual">$7900.<span class="cent">00</span></p><!-- Precio nuevo -->
+            <p>Cortina de baño con volado 180x180 cm</p><!-- Descripcion -->
+            <button class="boton--verde"><img src="../images/carrito.png" alt="Agregar al carrito"></button><!-- Boton carrito -->
           </div>
-          <!--Contenedor de tarjeta-->
+          <!-- Contenedor de tarjeta -->
           <div class="carta" data-aos="flip-left">
-            <!--Imagen -->
-            <img src="../images/producto_3.png" alt="Producto 3">
-            <!--Precio nuevo-->
-            <p class="actual">$6500.<span class="cent">00</span></p>
-            <!--Descripcion-->
-            <p>Mantelitos individuales X 6 u.</p>
-            <!--Boton carrito-->
-            <button class="boton--verde">
-              <img src="../images/carrito.png" alt="Carrito">
-            </button>
+            <img src="../images/producto_3.png" alt="Producto 3"><!-- Imagen -->
+            <p class="actual">$6500.<span class="cent">00</span></p><!-- Precio nuevo -->
+            <p>Mantelitos individuales X 6 u.</p><!-- Descripcion -->
+            <button class="boton--verde"><img src="../images/carrito.png" alt="Agregar al carrito"></button><!-- Boton carrito -->
           </div>
-          <!--Contenedor de tarjeta-->
+          <!-- Contenedor de tarjeta -->
           <div class="carta" data-aos="flip-left">
-            <!--Imagen -->
-            <img src="../images/producto_4.png" alt="Producto 4">
-            <!--Precio nuevo-->
-            <p class="actual">$3150.<span class="cent">00</span></p>
-            <!--Descripcion-->
-            <p>COMBO bolsita porta mate + yerbera</p>
-            <!--Boton carrito-->
-            <button class="boton--verde">
-              <img src="../images/carrito.png" alt="Carrito">
-            </button>
+            <img src="../images/producto_4.png" alt="Producto 4"><!-- Imagen -->
+            <p class="actual">$3150.<span class="cent">00</span></p><!-- Precio nuevo -->
+            <p>COMBO bolsita porta mate + yerbera</p><!-- Descripcion -->
+            <button class="boton--verde"><img src="../images/carrito.png" alt="Agregar al carrito"></button><!-- Boton carrito -->
           </div>
-          <!--Contenedor de tarjeta-->
+          <!-- Contenedor de tarjeta -->
           <div class="carta" data-aos="flip-left">
-            <!--Imagen -->
-            <div><img src="../images/producto_1.png" alt="Producto 1"></div>
-            <!--Precio nuevo-->
-            <p class="actual">$2300.<span class="cent">00</span></p>
-            <!--Descripcion-->
-            <p>Cartuchera hojas aqua</p>
-            <!--Boton carrito-->
-            <button class="boton--verde">
-              <img src="../images/carrito.png" alt="Carrito">
-            </button>
+            <div><img src="../images/producto_1.png" alt="Producto 1"></div><!-- Imagen -->
+            <p class="actual">$2300.<span class="cent">00</span></p><!-- Precio nuevo -->
+            <p>Cartuchera hojas aqua</p><!-- Descripcion -->
+            <button class="boton--verde"><img src="../images/carrito.png" alt="Agregar al carrito"></button><!-- Boton carrito -->
           </div>
-          <!--Contenedor de tarjeta-->
+          <!-- Contenedor de tarjeta -->
           <div class="carta" data-aos="flip-left">
-            <!--Imagen -->
-            <img src="../images/producto_2.png" alt="Producto 2">
-            <!--Precio nuevo-->
-            <p class="actual">$7900.<span class="cent">00</span></p>
-            <!--Descripcion-->
-            <p>Cortina de baño con volado 180x180 cm</p>
-            <!--Boton carrito-->
-            <button class="boton--verde">
-              <img src="../images/carrito.png" alt="Carrito">
-            </button>
+            <img src="../images/producto_2.png" alt="Producto 2"><!-- Imagen -->
+            <p class="actual">$7900.<span class="cent">00</span></p><!-- Precio nuevo -->
+            <p>Cortina de baño con volado 180x180 cm</p><!-- Descripcion -->
+            <button class="boton--verde"><img src="../images/carrito.png" alt="Agregar al carrito"></button><!-- Boton carrito -->
           </div>
-          <!--Contenedor de tarjeta-->
+          <!-- Contenedor de tarjeta -->
           <div class="carta" data-aos="flip-left">
-            <!--Imagen -->
-            <img src="../images/producto_3.png" alt="Producto 3">
-            <!--Precio nuevo-->
-            <p class="actual">$6500.<span class="cent">00</span></p>
-            <!--Descripcion-->
-            <p>Mantelitos individuales X 6 u.</p>
-            <!--Boton carrito-->
-            <button class="boton--verde">
-              <img src="../images/carrito.png" alt="Carrito">
-            </button>
+            <img src="../images/producto_3.png" alt="Producto 3"><!-- Imagen -->
+            <p class="actual">$6500.<span class="cent">00</span></p><!-- Precio nuevo -->
+            <p>Mantelitos individuales X 6 u.</p><!-- Descripcion -->
+            <button class="boton--verde"><img src="../images/carrito.png" alt="Agregar al carrito"></button><!-- Boton carrito -->
           </div>
-          <!--Contenedor de tarjeta-->
+          <!-- Contenedor de tarjeta -->
           <div class="carta" data-aos="flip-left">
-            <!--Imagen -->
-            <img src="../images/producto_4.png" alt="Producto 4">
-            <!--Precio nuevo-->
-            <p class="actual">$3150.<span class="cent">00</span></p>
-            <!--Descripcion-->
-            <p>COMBO bolsita porta mate + yerbera</p>
-            <!--Boton carrito-->
-            <button class="boton--verde">
-              <img src="../images/carrito.png" alt="Carrito">
-            </button>
+            <img src="../images/producto_4.png" alt="Producto 4"><!-- Imagen -->
+            <p class="actual">$3150.<span class="cent">00</span></p><!-- Precio nuevo -->
+            <p>COMBO bolsita porta mate + yerbera</p><!-- Descripcion -->
+            <button class="boton--verde"><img src="../images/carrito.png" alt="Agregar al carrito"></button><!-- Boton carrito -->
           </div>
-
         </div>
-
         <!-- Botones cambio de pagina -->
         <div class="paginas">
           <button class="boton--naranja">anterior</button>
           <button class="boton--naranja">siguiente</button>
         </div>
-  
       </section>
     </div>
-
   </main>
   <script>
     AOS.init();
   </script>
 </body>
-
 </html>

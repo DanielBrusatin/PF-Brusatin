@@ -40,8 +40,11 @@ header {
               border: 5px solid #ffffff00;
               border-radius: 40px;
               margin: 5px;
-              &:hover {
-                border: 5px solid $naranja-oscuro;
+              transition: all 1s cubic-bezier(0.1, 1.8, 0.65, 1.8);
+              &:not(.current):hover {
+                transform: scale(1.2);
+                background-color: $naranja-oscuro;
+                z-index: 1;
               }
             }
           }
