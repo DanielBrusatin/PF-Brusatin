@@ -2,10 +2,11 @@
 /* Articulo principal inicio */
 /*****************************/
 .principal_inicio {
+  padding: 0px 12px;
   article {
     h2 {
       font-family: 'Hahmlet', serif;
-      margin: 20px 0px;
+      padding: 20px 0px;
     }
     p {
       font-size: large;
@@ -15,7 +16,7 @@
     .volver {
       display: flex;
       justify-content: center;
-      margin: 20px;
+      padding: 20px;
     }
   }
   #ofertas_semanales {

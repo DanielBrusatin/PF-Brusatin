@@ -1,10 +1,10 @@
 /****************/
 /* Menú lateral */
 /****************/
-main {
   .lateral {
     background-color: $verde-claro;
     padding: 0px;
+    grid-area: aside;
     * {
     font-family: 'Sigmar', cursive;
     }
@@ -80,10 +80,8 @@ main {
       }
     }
   }
-}
 
 @media screen and (min-width: 768px) {
-  main {
     .lateral {
       nav {
         ul {
@@ -101,6 +99,5 @@ main {
       }
     }
   }
-}
 
 

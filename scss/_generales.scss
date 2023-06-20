@@ -14,11 +14,16 @@
   list-style: none;
 }
 
-/***********************************/
-/* Altura minima de 100 % viewport */
-/***********************************/
+/***************/
+/* Grid mobile */
+/***************/
 body {
-  min-height: 100vh;
+  display: grid;
+  grid-template:
+  "head"
+  "aside"
+  "main"
+  "foot"
 }
 
 /********************/
@@ -26,6 +31,8 @@ body {
 /********************/
 main {
   background-image: radial-gradient(circle, $rosa-claro, $rosa-oscuro);
+  grid-area: main;
+  min-height: calc(100vh - 166px - 49px);
 }
 
 /***********/
@@ -42,33 +49,37 @@ main {
   img {
     width: 100%;
   }
-  p {
-    margin: 0px;
-    &.promo {
-      background-color: white;
-      color: red;
-      text-align: center;
-      font-size: 10px;
-      position: absolute;
-      top: 30px;
-      left: 24px;
-      animation: rotate 4s infinite;
-    }
-    &.actual {
-      font-size: 25px;
-    }
-    .tachado {
-      text-decoration: line-through 1px red;
-    }
-    .cent {
-      vertical-align: text-top;
-      font-size: 0.5em;
+  .contenido {
+    padding: 10px;
+    p {
+      margin: 0px;
+      &.promo {
+        background-color: white;
+        color: red;
+        text-align: center;
+        font-size: 10px;
+        position: absolute;
+        top: 30px;
+        left: 24px;
+        animation: rotate 4s infinite;
+      }
+      &.actual {
+        font-size: 25px;
+      }
+      .tachado {
+        text-decoration: line-through 1px red;
+      }
+      .cent {
+        vertical-align: text-top;
+        font-size: 0.5em;
+      }
     }
   }
   .boton--verde {
     position: absolute;
     bottom: 10px;
     right: 10px;
+    padding: 10px 20px;
   }
 }
 
@@ -78,7 +89,7 @@ main {
 @mixin boton($fondo, $hover) {
   background-color: $fondo;
   border-radius: 50px;
-  padding: 5px 10px;
+  padding: 10px 15px;
   box-shadow: inset 0px 0px 10px black;
   font-family: 'Sigmar', cursive;
   font-weight: 800;
@@ -86,8 +97,8 @@ main {
     background-color: $hover;
     color: white;
   }
-
 }
+
 /***************/
 /* Boton verde */
 /***************/
@@ -102,3 +113,15 @@ main {
   @include boton($naranja-claro, $naranja-oscuro)
 }
 
+/****************/
+/* Grid desktop */
+/****************/
+@media screen and (min-width: 768px) {
+  body {
+    grid-template:
+    "head head"
+    "aside main"
+    "foot foot"
+    / 20% 1fr;
+  }
+}

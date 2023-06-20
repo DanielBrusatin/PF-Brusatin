@@ -17,11 +17,12 @@
   list-style: none;
 }
 
-/***********************************/
-/* Altura minima de 100 % viewport */
-/***********************************/
+/***************/
+/* Grid mobile */
+/***************/
 body {
-  min-height: 100vh;
+  display: grid;
+  grid-template: "head" "aside" "main" "foot";
 }
 
 /********************/
@@ -29,6 +30,8 @@ body {
 /********************/
 main {
   background-image: radial-gradient(circle, #F8E3E8, #fa9bb1);
+  grid-area: main;
+  min-height: calc(100vh - 166px - 49px);
 }
 
 /***********/
@@ -46,10 +49,13 @@ main {
 .carta img {
   width: 100%;
 }
-.carta p {
+.carta .contenido {
+  padding: 10px;
+}
+.carta .contenido p {
   margin: 0px;
 }
-.carta p.promo {
+.carta .contenido p.promo {
   background-color: white;
   color: red;
   text-align: center;
@@ -59,13 +65,13 @@ main {
   left: 24px;
   animation: rotate 4s infinite;
 }
-.carta p.actual {
+.carta .contenido p.actual {
   font-size: 25px;
 }
-.carta p .tachado {
+.carta .contenido p .tachado {
   text-decoration: line-through 1px red;
 }
-.carta p .cent {
+.carta .contenido p .cent {
   vertical-align: text-top;
   font-size: 0.5em;
 }
@@ -73,6 +79,7 @@ main {
   position: absolute;
   bottom: 10px;
   right: 10px;
+  padding: 10px 20px;
 }
 
 /*********/
@@ -84,7 +91,7 @@ main {
 .boton--verde {
   background-color: #C7DA64;
   border-radius: 50px;
-  padding: 5px 10px;
+  padding: 10px 15px;
   box-shadow: inset 0px 0px 10px black;
   font-family: "Sigmar", cursive;
   font-weight: 800;
@@ -100,7 +107,7 @@ main {
 .boton--naranja {
   background-color: #FAC462;
   border-radius: 50px;
-  padding: 5px 10px;
+  padding: 10px 15px;
   box-shadow: inset 0px 0px 10px black;
   font-family: "Sigmar", cursive;
   font-weight: 800;
@@ -110,11 +117,20 @@ main {
   color: white;
 }
 
+/****************/
+/* Grid desktop */
+/****************/
+@media screen and (min-width: 768px) {
+  body {
+    grid-template: "head head" "aside main" "foot foot"/20% 1fr;
+  }
+}
 /**************/
 /* Encabezado */
 /**************/
 header {
   background-image: url(../images/sandia.jpg);
+  grid-area: head;
 }
 header .navbar button {
   background-color: #FAC462;
@@ -145,7 +161,7 @@ header .navbar .navbar-nav li:last-child {
     border: 5px solid rgba(255, 255, 255, 0);
     border-radius: 40px;
     margin: 5px;
-    transition: all 1s cubic-bezier(0.1, 1.8, 0.65, 1.8);
+    transition: all 0.4s cubic-bezier(0.1, 1.8, 0.65, 1.8);
   }
   header .navbar div .menu .navbar-nav li:not(.current):hover {
     transform: scale(1.2);
@@ -156,90 +172,122 @@ header .navbar .navbar-nav li:last-child {
 /****************/
 /* Menú lateral */
 /****************/
-main .lateral {
+.lateral {
   background-color: #C7DA64;
   padding: 0px;
+  grid-area: aside;
 }
-main .lateral * {
+.lateral * {
   font-family: "Sigmar", cursive;
 }
-main .lateral nav ul {
+.lateral nav ul {
   margin: 0px;
   padding: 0px;
   display: flex;
   flex-wrap: wrap;
 }
-main .lateral nav ul li {
+.lateral nav ul li {
   flex: 50%;
   text-align: center;
   padding: 0px 5px;
 }
-main .lateral nav ul li a {
+.lateral nav ul li a {
   color: black;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
 }
-main .lateral .lista {
+.lateral .lista {
   padding: 0px;
 }
-main .lateral .lista * {
+.lateral .lista * {
   color: black;
 }
-main .lateral .lista p {
+.lateral .lista p {
   font-size: larger;
   font-weight: bolder;
   margin: 10px 10px 0px;
 }
-main .lateral .lista .sub_lista li a {
+.lateral .lista .sub_lista li a {
   font-weight: 400;
   margin-left: 15px;
 }
-main .lateral .dropdown-center {
+.lateral .dropdown-center {
   flex: auto;
 }
-main .lateral .dropdown .dropdown-menu.show {
+.lateral .dropdown .dropdown-menu.show {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-main .lateral .dropdown .dropdown-menu li {
+.lateral .dropdown .dropdown-menu li {
   margin: 10px;
 }
-main .lateral .dropdown .dropdown-menu li img {
+.lateral .dropdown .dropdown-menu li img {
   width: 100px;
 }
-main .lateral .dropdown button, main .lateral .dropdown-center button {
+.lateral .dropdown button, .lateral .dropdown-center button {
   width: 100%;
   border: solid 2px #A2C200;
   font-weight: bolder;
 }
-main .lateral .dropdown ul, main .lateral .dropdown-center ul {
+.lateral .dropdown ul, .lateral .dropdown-center ul {
   background-color: #C7DA64;
   border: solid 2px #A2C200;
 }
-main .lateral .dropdown ul li:hover, main .lateral .dropdown-center ul li:hover {
+.lateral .dropdown ul li:hover, .lateral .dropdown-center ul li:hover {
   background-color: #A2C200;
 }
 
 @media screen and (min-width: 768px) {
-  main .lateral nav ul {
+  .lateral nav ul {
     flex-direction: column;
   }
-  main .lateral nav ul li {
+  .lateral nav ul li {
     text-align: left;
     margin: 5px 0px;
   }
-  main .lateral .dropdown ul {
+  .lateral .dropdown ul {
     width: 200%;
   }
 }
+footer {
+  background-color: #90CBB9;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: foot;
+}
+footer p {
+  margin: 0px;
+  font-size: small;
+}
+footer .contacto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .contacto div img {
+  margin: 4px;
+  width: 20px;
+  filter: grayscale(100%);
+  transition: all 0.5s;
+}
+footer .contacto div img:hover {
+  filter: none;
+  animation: hover 0.3s;
+}
+
 /*****************************/
 /* Articulo principal inicio */
 /*****************************/
+.principal_inicio {
+  padding: 0px 12px;
+}
 .principal_inicio article h2 {
   font-family: "Hahmlet", serif;
-  margin: 20px 0px;
+  padding: 20px 0px;
 }
 .principal_inicio article p {
   font-size: large;
@@ -249,7 +297,7 @@ main .lateral .dropdown ul li:hover, main .lateral .dropdown-center ul li:hover 
 .principal_inicio article .volver {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  padding: 20px;
 }
 .principal_inicio #ofertas_semanales > div {
   justify-content: space-around;
@@ -320,25 +368,20 @@ main .lateral .dropdown ul li:hover, main .lateral .dropdown-center ul li:hover 
   margin-top: 10px;
 }
 .principal_tienda div .carta {
-  height: 360px;
-  max-width: calc((100vw - 80px) / 2);
-  max-height: calc(100vw - 80px);
+  height: 370px;
 }
 
 /***********************************/
 /* Articulo principal configurador */
 /***********************************/
-.main_configurador {
-  height: calc(100vh - 166px);
-}
-.main_configurador .principal_configurador {
+.principal_configurador {
   padding: 20px;
   display: flex;
 }
-.main_configurador .principal_configurador h3 {
+.principal_configurador h3 {
   font-family: "Hahmlet", serif;
 }
-.main_configurador .principal_configurador .vista {
+.principal_configurador .vista {
   width: 220px;
   height: 250px;
   display: flex;
@@ -346,7 +389,7 @@ main .lateral .dropdown ul li:hover, main .lateral .dropdown-center ul li:hover 
   justify-content: space-between;
   align-items: center;
 }
-.main_configurador .principal_configurador .precio {
+.principal_configurador .precio {
   width: 220px;
   height: 200px;
   display: flex;
@@ -354,19 +397,14 @@ main .lateral .dropdown ul li:hover, main .lateral .dropdown-center ul li:hover 
   justify-content: space-between;
   align-items: center;
 }
-.main_configurador .principal_configurador .precio p {
+.principal_configurador .precio p {
   font-size: 25px;
   font-weight: 800;
 }
-.main_configurador .principal_configurador .precio .boton--verde {
+.principal_configurador .precio .boton--verde {
   padding: 5px 25px;
 }
 
-@media screen and (min-width: 768px) {
-  .main_configurador .row {
-    min-height: 100%;
-  }
-}
 /*******************************/
 /* Articulo principal contacto */
 /*******************************/
@@ -375,6 +413,7 @@ main .lateral .dropdown ul li:hover, main .lateral .dropdown-center ul li:hover 
   display: flex;
   flex-direction: column;
   align-items: center;
+  grid-area: aside/aside/main/main;
 }
 .principal_contacto p {
   font-size: large;
@@ -389,6 +428,9 @@ main .lateral .dropdown ul li:hover, main .lateral .dropdown-center ul li:hover 
 }
 .principal_contacto .redes div a img {
   max-width: 100%;
+}
+.principal_contacto .redes div a img:hover {
+  animation: hover 0.3s;
 }
 .principal_contacto form {
   background-color: #FAC462;
@@ -447,6 +489,7 @@ main .lateral .dropdown ul li:hover, main .lateral .dropdown-center ul li:hover 
   display: flex;
   flex-direction: column;
   padding: 20px;
+  grid-area: aside/aside/main/main;
 }
 .principal_carrito .productos {
   display: flex;
@@ -504,6 +547,17 @@ main .lateral .dropdown ul li:hover, main .lateral .dropdown-center ul li:hover 
   }
   100% {
     transform: rotate(-45deg) scale(150%);
+  }
+}
+@keyframes hover {
+  0% {
+    transform: rotate(-20deg) scale(110%);
+  }
+  50% {
+    transform: rotate(20deg) scale(110%);
+  }
+  100% {
+    transform: rotate(-20deg) scale(110%);
   }
 }
 

@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  grid-area: aside / aside / main / main;
   p {
     font-size: large;
   }
@@ -18,6 +19,9 @@
     a {
       img {
         max-width: 100%;
+        &:hover {
+          animation: hover 0.3s;
+        }
       }
     }
   }

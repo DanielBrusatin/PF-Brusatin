@@ -14,3 +14,16 @@
     transform: rotate(-45deg) scale(150%);
   }
 }
+
+@keyframes hover {
+  0% {
+    transform: rotate(-20deg) scale(110%);
+  }
+  50% {
+    transform: rotate(20deg) scale(110%);
+  }
+  100% {
+    transform: rotate(-20deg) scale(110%);
+  }
+
+}
