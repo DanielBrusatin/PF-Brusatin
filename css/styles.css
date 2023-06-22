@@ -21,8 +21,9 @@
 /* Grid mobile */
 /***************/
 body {
+  min-height: 100vh;
   display: grid;
-  grid-template: "head" "aside" "main" "foot";
+  grid-template: "head" auto "aside" auto "main" 1fr "foot" auto;
 }
 
 /********************/
@@ -31,7 +32,6 @@ body {
 main {
   background-image: radial-gradient(circle, #F8E3E8, #fa9bb1);
   grid-area: main;
-  min-height: calc(100vh - 166px - 49px);
 }
 
 /***********/
@@ -91,7 +91,7 @@ main {
 .boton--verde {
   background-color: #C7DA64;
   border-radius: 50px;
-  padding: 10px 15px;
+  padding: 8px 17px;
   box-shadow: inset 0px 0px 10px black;
   font-family: "Sigmar", cursive;
   font-weight: 800;
@@ -107,7 +107,7 @@ main {
 .boton--naranja {
   background-color: #FAC462;
   border-radius: 50px;
-  padding: 10px 15px;
+  padding: 8px 17px;
   box-shadow: inset 0px 0px 10px black;
   font-family: "Sigmar", cursive;
   font-weight: 800;
@@ -122,7 +122,7 @@ main {
 /****************/
 @media screen and (min-width: 768px) {
   body {
-    grid-template: "head head" "aside main" "foot foot"/20% 1fr;
+    grid-template: "head head" 170px "aside main" 1fr "foot foot" 55px/22% 1fr;
   }
 }
 /**************/
@@ -174,7 +174,6 @@ header .navbar .navbar-nav li:last-child {
 /****************/
 .lateral {
   background-color: #C7DA64;
-  padding: 0px;
   grid-area: aside;
 }
 .lateral * {
@@ -206,11 +205,17 @@ header .navbar .navbar-nav li:last-child {
 .lateral .lista p {
   font-size: larger;
   font-weight: bolder;
-  margin: 10px 10px 0px;
+  margin: 10px 0px 0px;
+  text-align: center;
+}
+.lateral .lista .sub_lista {
+  padding: 0px;
+}
+.lateral .lista .sub_lista li {
+  text-align: center;
 }
 .lateral .lista .sub_lista li a {
   font-weight: 400;
-  margin-left: 15px;
 }
 .lateral .dropdown-center {
   flex: auto;
@@ -240,11 +245,13 @@ header .navbar .navbar-nav li:last-child {
 }
 
 @media screen and (min-width: 768px) {
+  .lateral nav {
+    margin-top: 20px;
+  }
   .lateral nav ul {
     flex-direction: column;
   }
   .lateral nav ul li {
-    text-align: left;
     margin: 5px 0px;
   }
   .lateral .dropdown ul {
@@ -417,9 +424,11 @@ footer .contacto div img:hover {
 }
 .principal_contacto p {
   font-size: large;
+  text-align: justify;
 }
 .principal_contacto .redes {
   display: flex;
+  justify-content: space-evenly;
   max-width: 100%;
 }
 .principal_contacto .redes div {

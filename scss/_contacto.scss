@@ -9,22 +9,24 @@
   grid-area: aside / aside / main / main;
   p {
     font-size: large;
+    text-align: justify;
   }
   .redes {
-  display: flex;
-  max-width: 100%;
-  div {
-    padding: 15px;
-    max-width: 33%;
-    a {
-      img {
-        max-width: 100%;
-        &:hover {
-          animation: hover 0.3s;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 100%;
+    div {
+      padding: 15px;
+      max-width: 33%;
+      a {
+        img {
+          max-width: 100%;
+          &:hover {
+            animation: hover 0.3s;
+          }
         }
       }
     }
-  }
   }
   form {
     background-color: $naranja-claro;
