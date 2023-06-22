@@ -4,11 +4,11 @@
 .principal_configurador {
   padding: 20px;
   display: flex;
+  justify-content: space-evenly;
   h3 {
     font-family: 'Hahmlet', serif;
   }
   .vista {
-    width: 220px;
     height: 250px;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,6 @@
     align-items: center;
   }
   .precio {
-    width: 220px;
     height: 200px;
     display: flex;
     flex-direction: column;

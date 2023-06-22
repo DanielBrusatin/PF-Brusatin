@@ -384,12 +384,12 @@ footer .contacto div img:hover {
 .principal_configurador {
   padding: 20px;
   display: flex;
+  justify-content: space-evenly;
 }
 .principal_configurador h3 {
   font-family: "Hahmlet", serif;
 }
 .principal_configurador .vista {
-  width: 220px;
   height: 250px;
   display: flex;
   flex-direction: column;
@@ -397,7 +397,6 @@ footer .contacto div img:hover {
   align-items: center;
 }
 .principal_configurador .precio {
-  width: 220px;
   height: 200px;
   display: flex;
   flex-direction: column;
