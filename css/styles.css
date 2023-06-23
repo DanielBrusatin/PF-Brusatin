@@ -571,19 +571,19 @@ footer .contacto div img:hover {
 /*******************/
 /* Página de error */
 /*******************/
-.error {
+main.error {
   grid-area: aside/aside/main/main;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.error p {
+main.error p {
   margin: 10px;
   font-size: larger;
   font-weight: bolder;
   text-align: center;
 }
-.error img {
+main.error img {
   padding: 5px;
   max-width: 100%;
 }
