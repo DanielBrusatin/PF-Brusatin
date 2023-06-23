@@ -576,6 +576,7 @@ main.error {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
 }
 main.error p {
   margin: 10px;
