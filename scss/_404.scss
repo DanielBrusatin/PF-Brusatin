@@ -1,0 +1,19 @@
+/*******************/
+/* Página de error */
+/*******************/
+.error {
+  grid-area: aside / aside / main / main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    margin: 10px;
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+  }
+  img {
+    padding: 5px;
+    max-width: 100%;
+  }
+}
